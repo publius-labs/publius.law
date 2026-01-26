@@ -14,22 +14,6 @@
   font-display: block;
 }
 
-@font-face {
-  font-family: benton-modern-display;
-  src: url('../fonts/benton-modern-display.woff2') format("woff2"), url('../fonts/benton-modern-display.woff') format("woff"), url('../fonts/benton-modern-display.ttf') format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: sans-serif;
-  src: url('../fonts/sans-serif.woff2') format("woff2"), url('../fonts/sans-serif.woff') format("woff"), url('../fonts/sans-serif.ttf') format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: block;
-}
-
 :root {
   --light-tone: #f8f6f2;
   --dark-tone: #40575c;
