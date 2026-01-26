@@ -1,45 +1,33 @@
-# Publius.law
+# Publius
 
-> Publius is an AI-native legal research and workflow platform that helps litigators and in‑house teams search, analyze, and orchestrate complex legal matters across documents, dockets, and evidence.
+> Publius is your AI-powered legal partner for small law firms handling criminal and civil cases, streamlining research, discovery, and trial preparation so you can spend less time searching and more time winning.[file:2]
 
-Publius combines retrieval‑augmented legal research, e‑discovery style document review, and workflow automation into a single system of record for litigation teams. It is designed for U.S. law practices, litigation boutiques, and in‑house legal departments that need fast, explainable answers grounded in their own documents and public sources.
+From intake to discovery, research to trial prep, Publius cuts days of work into hours by instantly surfacing relevant case law, documents, and digital evidence — hosted on your terms, either on-premise or in a SOC 2–ready secure cloud.[file:1][file:2]
 
-## Product & platform
+## Core product
 
-- [Home](https://publius.law/): Overview of the Publius platform, value proposition, and primary use cases for litigation and in‑house teams.
-- [Product](https://publius.law/product): Detailed description of key product capabilities, including legal search, document analysis, timeline building, and workflow automation.
-- [How It Works](https://publius.law/how-it-works): High‑level explanation of Publius’ technical architecture, including AI, retrieval, and data security model.
-- [Security](https://publius.law/security): Information about infrastructure, data handling, access controls, and compliance posture relevant to law firms and enterprises.
-- [Pricing](https://publius.law/pricing): Summary of pricing tiers, who they are for (small firms, boutiques, in‑house teams), and what is included.
+- [Home](https://publius.law): High-level overview of Publius as an AI-powered legal technology platform for small practices handling criminal and civil cases.[file:2]
+- [Cloud-Based AI](https://publius.law/landing/solution.html): Scalable cloud deployment option for secure document review and legal research.[file:2]
+- [On-Premise AI](https://publius.law/landing/solution.html): Full-control deployment on your own infrastructure for in-house legal analysis and maximum data control.[file:2]
+- [Custom Development](https://publius.law/landing/solution.html): Tailored AI solutions built around your specific legal workflows and tools.[file:2]
+- [Log in](https://publius.law/log-in.html): Access point for existing Publius users to sign in to the platform.[file:2]
 
-## Use cases & audiences
+## Use cases & benefits
 
-- [For Law Firms](https://publius.law/law-firms): How litigation boutiques and full‑service firms use Publius for research, motion practice, and case strategy.
-- [For In‑House Teams](https://publius.law/in-house): How corporate legal departments use Publius for investigations, early case assessment, and outside counsel coordination.
-- [Workflows](https://publius.law/workflows): Examples of end‑to‑end workflows (e.g., intake to filing, discovery review, brief drafting) orchestrated in Publius.
-- [Case Studies](https://publius.law/case-studies): Real or representative examples of how customers use Publius and the outcomes they achieve.
+- [Less grind. More law.](https://publius.law): Explanation of how Publius streamlines work from intake to discovery, research, and trial prep so attorneys can focus on clients.[file:2]
+- [Built for small practices](https://publius.law): Details on Publius being designed exclusively for solo attorneys and small law firms that need enterprise-grade AI without enterprise pricing.[file:1][file:2]
+- [Security & hosting](https://publius.law): Highlights of bank-level encryption, strict confidentiality controls, and the option to choose between a private server or secure cloud.[file:1][file:2]
 
-## Documentation & technical details
+## Company & contact
 
-- [Documentation](https://docs.publius.law/): Technical and user documentation for the Publius platform and APIs.
-- [API Reference](https://docs.publius.law/api): Reference docs for integrating Publius programmatically (authentication, endpoints, and example responses).
-- [Changelog](https://docs.publius.law/changelog): Release notes describing new features, improvements, and fixes over time.
+- [About](https://publius.law/company/about.html): Background on Publius Labs, its mission, and why it focuses on small law firms and solo practitioners.[file:2]
+- [Contact](https://publius.law/company/contact.html): Contact information and form for inquiries from attorneys, firms, and partners.[file:2]
+- [Request Demo](https://publius.law/features/request-demo.html): Page for attorneys and firms to request a product demo or early access.[file:2]
+- [Email](mailto:info@publius.law): Direct email channel for questions about Publius, deployment options, and early access.[file:1][file:2]
+- [Phone](tel:13479787887): Phone number for contacting the Publius team.[file:1][file:2]
+- [LinkedIn](https://www.linkedin.com/company/publiuslegal/): Social profile describing Publius’ positioning and updates.[file:2]
+- [X (Twitter)](https://x.com/PubliusNews): Updates and announcements related to Publius and legal AI.[file:2]
 
-## Company & legal
+## Safety, ethics & responsibility
 
-- [About](https://publius.law/about): Background on the company, mission, and founding team.
-- [Blog](https://publius.law/blog): Articles on AI for law, litigation workflows, product updates, and company news.
-- [Careers](https://publius.law/careers): Open roles and hiring information.
-- [Terms of Use](https://publius.law/terms): Contractual terms governing use of the Publius platform.
-- [Privacy Policy](https://publius.law/privacy): How Publius collects, stores, and processes user and case data.
-
-## Contact & support
-
-- [Contact](https://publius.law/contact): Contact form and business contact information for sales, partnerships, and press.
-- [Support](https://publius.law/support): Help center, FAQs, and support contact paths for existing customers.
-- [Status](https://status.publius.law/): Service availability, incident history, and uptime information (if available).
-
-## Optional
-
-- [Founders’ Letter](https://publius.law/founders-letter): Narrative context on why Publius exists and its long‑term vision for AI in law.
-- [Events](https://publius.law/events): Conferences, webinars, and talks where the Publius team is presenting or sponsoring.
+- [Professional Judgment & Ethics Notice](https://publius.law): Disclosure that Publius is a legal technology platform, not a law firm; it does not provide legal advice, does not create an attorney–client relationship, and users remain responsible for their legal work and ethical obligations under applicable laws and professional rules.[file:1][file:2]
