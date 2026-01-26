@@ -1314,9 +1314,9 @@ figcaption {
 }
 
 .section.team-intro-title {
-  border-top: 1px solid var(--border-white);
+  border-top: 1px solid var(--border-dark);
   border-bottom-style: solid;
-  border-bottom-color: var(--border-white);
+  border-bottom-color: var(--border-dark);
   background-color: var(--very-dark-tone);
   color: var(--light-tone);
   padding-top: 24px;
@@ -2313,8 +2313,8 @@ figcaption {
 }
 
 .footer-left-column {
-  border-right: 1px solid var(--border-white);
-  border-left: 1px solid var(--border-white);
+  border-right: 1px solid var(--border-dark);
+  border-left: 1px solid var(--border-dark);
   width: 25%;
   padding: 144px 24px;
 }
@@ -2399,7 +2399,7 @@ figcaption {
 }
 
 .footer-bottom-wrapper {
-  border-top: 1px solid var(--border-white);
+  border-top: 1px solid var(--border-dark);
 }
 
 .footer-social-row {
@@ -5225,7 +5225,6 @@ figcaption {
 .text-block-23, .text-block-24, .text-block-25, .text-block-26 {
   font-weight: 300;
   line-height: 2em;
-  font-family: sans-serif;
   font-size: 23px;
 }
 
