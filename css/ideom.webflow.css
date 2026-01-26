@@ -1125,7 +1125,7 @@
 body {
   background-color: var(--light-tone);
   color: var(--dark-tone);
-  font-family: BDO Grotesk, Arial, sans-serif;
+  font-family: BHedvig Letters Serif, Times New Roman, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5em;
@@ -1477,7 +1477,7 @@ figcaption {
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   border-bottom-style: none;
-  padding-top: 40px;
+  padding-top: 0px;
   padding-bottom: 100px;
   padding-left: 48px;
 }
@@ -2263,10 +2263,10 @@ figcaption {
   padding-top: 20px;
   padding-bottom: 140px;
   padding-left: 0;
-  font-family: sans-serif, serif;
+  font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
   font-size: 24px;
   font-weight: 300;
-  line-height: 2.4em;
+  line-height: 1.5em;
 }
 
 .heading-four.dropdown-link-heading {
@@ -2387,7 +2387,7 @@ figcaption {
 .footer-link {
   opacity: .6;
   color: var(--white);
-  font-family: SYSTEM-UI;
+  font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
   transition: opacity .2s;
 }
 
@@ -2469,7 +2469,7 @@ figcaption {
 
 .fine-print {
   font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5em;
 }
 
@@ -5049,8 +5049,8 @@ figcaption {
   -webkit-text-stroke-color: gray;
   margin-left: 0;
   padding-left: 0;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 300;
 }
 
 .text-block, .text-block-2, .text-block-3, .text-block-4 {
@@ -5131,7 +5131,6 @@ figcaption {
 .bold-text-11 {
   color: var(--white);
   padding-left: 0;
-  font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
   font-size: 2.2em;
 }
 
@@ -5194,7 +5193,7 @@ figcaption {
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 0;
-  font-family: sans-serif, serif;
+  font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
   font-size: 24px;
   font-weight: 300;
   line-height: 2.4em;
@@ -5583,7 +5582,7 @@ figcaption {
   }
 
   .heading-four {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .heading-four.dropdown-link-heading {
