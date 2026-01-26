@@ -1493,7 +1493,7 @@ figcaption {
 }
 
 .small-text {
-  color: var(--light-tone-text);
+  color: var(--dark-tone-faded);
   font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
   font-size: 14px;
   line-height: 1.4em;
@@ -7032,7 +7032,6 @@ figcaption {
   .small-text {
     font-size: 12px;
     line-height: 1.4em;
-    font-family: sans-serif;
   }
 
   .button.inside-right-navbar {
