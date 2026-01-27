@@ -5503,9 +5503,6 @@ figcaption {
   .nav-links {
     grid-column-gap: 18px;
     grid-row-gap: 18px;
-    background-image: url('../images/Background_BW.jpg');
-    background-position: 0 0;
-    background-size: auto;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -7090,7 +7087,11 @@ figcaption {
   }
 
   .nav-link.inside-right-navbar {
-    display: none;
+    display: inline-flex;
+  }
+
+  .button.inside-right-navbar {
+    display: flex;
   }
 
   .nav-links {
