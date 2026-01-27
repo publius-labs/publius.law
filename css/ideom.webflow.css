@@ -1493,7 +1493,7 @@ figcaption {
 }
 
 .small-text {
-  color: var(--dark-tone-faded);
+  color: var(--light-tone-text);
   font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
   font-size: 14px;
   line-height: 1.4em;
@@ -2852,7 +2852,7 @@ figcaption {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 24px;
-  display: flex;
+  display: none;
 }
 
 .quote-box-text {
@@ -5474,8 +5474,69 @@ figcaption {
     display: flex;
   }
 
-  .nav-link.inside-right-navbar {
-    display: none;
+  .navbar.w-nav {
+    position: relative;
+  }
+
+  .nav-menu {
+    position: absolute !important;
+    inset: unset !important;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #000;
+    overflow: visible;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-menu.dark {
+    background-color: #000;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    grid-column-gap: 18px;
+    grid-row-gap: 18px;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 16px 24px;
+    font-size: 18px;
+    background-image: none !important;
+    background-color: transparent !important;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a:last-of-type {
+    border-bottom: none;
+  }
+
+  .nav-links a.w--current {
+    font-weight: 600;
+  }
+
+  .nav-links a[href$="log-in.html"] {
+    display: none !important;
+  }
+
+  .div-block-4 {
+    background-color: transparent !important;
+  }
+
+  .nav-menu-close {
+    display: none !important;
+  }
+
+  .mobile-logo {
+    display: none !important;
   }
 
   .dropdown-toggle {
@@ -5486,43 +5547,6 @@ figcaption {
 
   .dropdown-toggle.white {
     border-bottom-color: var(--border-white);
-  }
-
-  .nav-menu {
-    z-index: 999;
-    background-color: var(--light-tone);
-    position: fixed;
-    inset: 0;
-    overflow: scroll;
-  }
-
-  .nav-menu.dark {
-    background-color: var(--dark-tone);
-  }
-
-  .nav-links {
-    grid-column-gap: 18px;
-    grid-row-gap: 18px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 24px;
-    font-size: 25px;
-  }
-
-  .mobile-logo {
-    align-self: flex-start;
-    margin-bottom: 48px;
-    display: block;
-  }
-
-  .mobile-logo.w--current {
-    align-self: flex-start;
-    margin-bottom: 36px;
-  }
-
-  .nav-menu-close {
-    pointer-events: auto;
   }
 
   .heading-one {
