@@ -1,8 +1,8 @@
-// Contact form: submit via fetch (same pattern as ideom.com), no redirect, inline success/error.
+// Request Demo form: submit via fetch (same pattern as ideom.com), no redirect, inline success/error.
 // Form action must be your Formspree endpoint so emails go to info@publius.law.
 (function() {
   document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('wf-form-Contact-Form');
+    var form = document.getElementById('wf-form-Request-Demo-Form');
     if (!form) return;
 
     var formBlock = form.closest('.form-block');
