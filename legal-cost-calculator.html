@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Cost Calculator</title>
+  <style>
+    /* Calculator Container */
+    #legal-cost-calculator {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 32px;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    #legal-cost-calculator h2 {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .calculator-content {
+      display: grid;
+      gap: 32px;
+    }
+
+    /* Inputs Section */
+    .calculator-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .input-group input {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      transition: border-color 0.2s;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    /* Results Section */
+    .calculator-results {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 24px;
+      background-color: #fff;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .result-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .result-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .result-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .result-value.secondary {
+      font-size: 24px;
+      color: #555;
+    }
+
+    /* Responsive Layout */
+    @media (min-width: 601px) {
+      .calculator-content {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .calculator-results {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #legal-cost-calculator {
+        padding: 24px;
+        margin: 20px;
+      }
+
+      #legal-cost-calculator h2 {
+        font-size: 20px;
+      }
+
+      .result-value {
+        font-size: 24px;
+      }
+
+      .result-value.secondary {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- COPY THIS SECTION TO EMBED IN YOUR PAGE -->
+  <!-- ============================================ -->
+  
+  <section id="legal-cost-calculator">
+    <h2>Legal Cost Calculator</h2>
+    
+    <div class="calculator-content">
+      <!-- Input Fields -->
+      <div class="calculator-inputs">
+        <div class="input-group">
+          <label for="hourly-rate">Hourly Rate ($)</label>
+          <input 
+            type="number" 
+            id="hourly-rate" 
+            name="hourly-rate" 
+            value="350" 
+            min="0" 
+            step="1"
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="hours-per-month">Hours per Month</label>
+          <input 
+            type="number" 
+            id="hours-per-month" 
+            name="hours-per-month" 
+            value="40" 
+            min="0" 
+            step="1"
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="documents-per-month">Documents per Month</label>
+          <input 
+            type="number" 
+            id="documents-per-month" 
+            name="documents-per-month" 
+            value="500" 
+            min="0" 
+            step="1"
+          >
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="calculator-results">
+        <div class="result-item">
+          <div class="result-label">Estimated Monthly Legal Spend</div>
+          <div class="result-value" id="monthly-spend">$0.00</div>
+        </div>
+
+        <div class="result-item">
+          <div class="result-label">Estimated Cost per Document</div>
+          <div class="result-value secondary" id="cost-per-document">—</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- END OF EMBEDDABLE SECTION -->
+  <!-- ============================================ -->
+
+  <script>
+    // Currency formatter
+    const currencyFormatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    // Get input elements
+    const hourlyRateInput = document.getElementById('hourly-rate');
+    const hoursPerMonthInput = document.getElementById('hours-per-month');
+    const documentsPerMonthInput = document.getElementById('documents-per-month');
+
+    // Get result elements
+    const monthlySpendEl = document.getElementById('monthly-spend');
+    const costPerDocumentEl = document.getElementById('cost-per-document');
+
+    // Calculate and update totals
+    function updateTotals() {
+      // Parse input values (default to 0 if empty or invalid)
+      const hourlyRate = parseFloat(hourlyRateInput.value) || 0;
+      const hoursPerMonth = parseFloat(hoursPerMonthInput.value) || 0;
+      const documentsPerMonth = parseFloat(documentsPerMonthInput.value) || 0;
+
+      // Calculate monthly legal spend
+      const monthlySpend = hourlyRate * hoursPerMonth;
+
+      // Calculate cost per document
+      let costPerDocument = 0;
+      let costPerDocumentDisplay = '—';
+
+      if (documentsPerMonth > 0) {
+        costPerDocument = monthlySpend / documentsPerMonth;
+        costPerDocumentDisplay = currencyFormatter.format(costPerDocument);
+      }
+
+      // Update display
+      monthlySpendEl.textContent = currencyFormatter.format(monthlySpend);
+      costPerDocumentEl.textContent = costPerDocumentDisplay;
+    }
+
+    // Add event listeners to all inputs
+    hourlyRateInput.addEventListener('input', updateTotals);
+    hoursPerMonthInput.addEventListener('input', updateTotals);
+    documentsPerMonthInput.addEventListener('input', updateTotals);
+
+    // Initialize on page load
+    updateTotals();
+  </script>
+
+</body>
+</html>
+
+<!-- 
+  ============================================
+  EMBEDDING INSTRUCTIONS
+  ============================================
+  
+  To embed this calculator in an existing page:
+  
+  1. Copy the entire <section id="legal-cost-calculator"> block
+     (from the "COPY THIS SECTION" comment to "END OF EMBEDDABLE SECTION")
+  
+  2. Paste it into your existing HTML page where you want the calculator to appear
+  
+  3. Copy the <style> block and paste it in your page's <head> or existing stylesheet
+  
+  4. Copy the <script> block and paste it before the closing </body> tag
+  
+  That's it! The calculator will work independently on any page.
+  
+  The calculator automatically:
+  - Recalculates on every input change
+  - Formats results as USD currency
+  - Shows "—" for cost-per-document when documents = 0
+  - Treats empty fields as 0
+  - Responds to mobile and desktop layouts
+-->

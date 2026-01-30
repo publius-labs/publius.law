@@ -1491,6 +1491,12 @@ figcaption {
 .style-guide-section-contents.form {
   justify-items: stretch;
 }
+.calculator-tool-container {
+  color: var(--very-dark-tone);
+  font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+}
 
 .small-text {
   color: var(--light-tone-text);
@@ -1908,6 +1914,7 @@ figcaption {
 .form-success {
   background-color: var(--mid-tone);
   border-radius: 12px;
+  margin-top: 10px;
 }
 
 .form-error {
@@ -5137,7 +5144,7 @@ figcaption {
 }
 
 .hero-text {
-  background-color: #0009;
+  background-color: none;
   border: 0 solid #0003;
   border-bottom-width: 1px;
   border-radius: 0;
