@@ -1208,7 +1208,7 @@ figcaption {
 
 .section {
   border-bottom: 1px solid var(--border-dark);
-  background-color: #000;
+  background-color: #fdfdfd;
   padding-top: 24px;
   padding-bottom: 96px;
 }
@@ -1242,7 +1242,7 @@ figcaption {
 }
 
 .section.bg-dark-tone {
-  background-color: var(--dark-tone);
+  background-color: var(--dark---);
   color: var(--light-tone);
 }
 
@@ -1317,14 +1317,14 @@ figcaption {
   border-top: 1px solid var(--border-dark);
   border-bottom-style: solid;
   border-bottom-color: var(--border-dark);
-  background-color: var(--very-dark-tone);
+  background-color: var(--white-faded);
   color: var(--light-tone);
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
 .section.team-section {
-  background-color: var(--very-dark-tone);
+  background-color: var(--border-white);
 }
 
 .section.careers-title {
@@ -1416,10 +1416,10 @@ figcaption {
 .container---main {
   grid-column-gap: 64px;
   grid-row-gap: 64px;
-  border-bottom-style: solid;
+  border-bottom-style: solid ;
   border-bottom-width: 1px;
   border-bottom-color: var(--border-dark);
-  color: var(--white);
+  color: var(--very-dark-tone);
   background-color: #0000;
   flex-flow: column;
   width: 100%;
@@ -1499,7 +1499,7 @@ figcaption {
 }
 
 .small-text {
-  color: var(--light-tone-text);
+  color: var(--very-dark-tone);
   font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
   font-size: 14px;
   line-height: 1.4em;
@@ -1836,7 +1836,7 @@ figcaption {
 }
 
 .select-field {
-  color: var(--dark-tone);
+  color: var(--dark-tone-faded);
   background-color: #0000;
   background-image: url('../images/icon-select-arrow.svg');
   background-position: 90%;
@@ -1854,7 +1854,7 @@ figcaption {
 }
 
 .display-heading {
-  color: var(--white);
+  color: #000000;
   letter-spacing: -.02em;
   -webkit-text-stroke-color: var(--very-dark-tone);
   border-radius: 0;
@@ -2176,9 +2176,9 @@ figcaption {
 }
 
 .heading-two {
-  color: var(--white);
+  color: #000000;
   letter-spacing: -.02em;
-  -webkit-text-stroke-color: var(--white);
+  -webkit-text-stroke-color: #000000;
   max-width: 800px;
   margin-left: 24px;
   font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
@@ -2205,7 +2205,7 @@ figcaption {
 }
 
 .heading-two.large-quote {
-  color: var(--white);
+  color: var(--dark---);
   font-family: Montserrat, sans-serif;
 }
 
@@ -2222,6 +2222,7 @@ figcaption {
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2em;
+   text-align: center; 
 }
 
 .heading-three.wide-article-preview-title {
@@ -2238,8 +2239,8 @@ figcaption {
 }
 
 .heading-four {
-  color: var(--light-tone-text);
-  -webkit-text-stroke-color: var(--white-faded);
+  color: #000000; 
+  -webkit-text-stroke-color: #000000;
   flex: 0 auto;
   align-self: auto;
   margin-left: 0;
@@ -3423,8 +3424,8 @@ figcaption {
 }
 
 .accordion-title-text.text-dark-tone {
-  color: var(--white);
-  -webkit-text-stroke-color: var(--white);
+  color: var(--very-dark-tone);
+  -webkit-text-stroke-color: var(--very-dark-tone);
   font-family: Hedvig Letters Serif, Times New Roman, sans-serif;
 }
 
@@ -3999,8 +4000,8 @@ figcaption {
 .badge {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
-  background-color: var(--white);
-  color: var(--very-dark-tone);
+  background-color: var(--very-dark-tone);
+  color: var(--white);
   border-radius: 36px;
   flex-flow: row;
   justify-content: flex-start;
@@ -4091,7 +4092,7 @@ figcaption {
 }
 
 .team-member-name-position {
-  color: var(--light-tone);
+  color: var(--very-dark-tone);
 }
 
 .text-white---faded {
@@ -5144,7 +5145,7 @@ figcaption {
 }
 
 .hero-text {
-  background-color: none;
+  background-color: none    ;
   border: 0 solid #0003;
   border-bottom-width: 1px;
   border-radius: 0;
@@ -5155,7 +5156,7 @@ figcaption {
 }
 
 .text-block-12 {
-  color: var(--light-tone-text);
+  color: #000000;
   font-family: INCONSOLATA;
   font-size: 20px;
 }
@@ -5217,12 +5218,12 @@ figcaption {
 }
 
 .text-block-20 {
-  color: var(--white);
+  color: var(--very-dark-tone);
   -webkit-text-stroke-color: var(--dark-tone);
 }
 
 .text-block-21, .text-block-22 {
-  color: var(--white);
+  color: var(--very-dark-tone);
 }
 
 .bold-text-18 {
