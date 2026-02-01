@@ -1434,7 +1434,7 @@ figcaption {
 }
 
 .container---main.inside-dropdown {
-  background-color: #0000;
+  background-color:ver(--light-tone-faded)
 }
 
 .container---main.process-hero-container {
@@ -2222,7 +2222,6 @@ figcaption {
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2em;
-   text-align: center; 
 }
 
 .heading-three.wide-article-preview-title {
@@ -2243,7 +2242,7 @@ figcaption {
   -webkit-text-stroke-color: #000000;
   flex: 0 auto;
   align-self: auto;
-  margin-left: 0;
+  margin-left: 50px       ;
   margin-right: 0;
   padding-top: 20px;
   padding-bottom: 140px;
@@ -2255,7 +2254,7 @@ figcaption {
 }
 
 .heading-four.dropdown-link-heading {
-  color: var(--very-dark-tone);
+  color: var(-- );
   font-variation-settings: "wght" 300;
   margin-left: 0;
   padding-top: 0;
@@ -2512,7 +2511,7 @@ figcaption {
 .dropdown-grid {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  background-color: #0009;
+  background-color:var(--light-tone-faded);
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
@@ -2522,8 +2521,8 @@ figcaption {
 }
 
 .dropdown-box-link {
-  background-color: var(--white);
-  color: var(--white);
+  background-color: var(--light-tone);
+  color: var(-very-dark-tone);
   border-radius: 12px;
   flex-flow: column;
   justify-content: space-between;
