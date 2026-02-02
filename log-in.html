@@ -48,15 +48,12 @@
     <div class="account-wrapper">
       <div class="w-users-userloginformwrapper account-form-block">
         <div class="heading-four account-page-title">Log in</div>
-        <form class="account-form" data-wf-user-form-type="login" data-wf-user-form-redirect="/" method="post">
+        <form class="account-form" action="https://auth.publius.site/u/login" method="post" target="_self">
           <div class="form-grid account-form">
-            <div class="input-group"><label for="Email" class="field-label">Email</label><input maxlength="256" placeholder="" name="Email" id="wf-log-in-email" class="form-input white w-input" type="email" autocomplete="username" required="" data-wf-user-form-input-type="email"></div>
-            <div class="input-group"><label for="Password" class="field-label-2">Password</label><input maxlength="256" placeholder="" name="Password" id="wf-log-in-password" class="form-input white w-input" type="password" required="" data-wf-user-form-input-type="password"></div><input type="submit" data-wait="Please wait..." class="w-users-userformbutton button w-button" value="Log in">
+            <div class="input-group"><label for="wf-log-in-email" class="field-label">Email</label><input maxlength="256" placeholder="" name="email" id="wf-log-in-email" class="form-input white w-input" type="email" autocomplete="username" required="" value=""></div>
+            <div class="input-group"><label for="wf-log-in-password" class="field-label-2">Password</label><input maxlength="256" placeholder="" name="password" id="wf-log-in-password" class="form-input white w-input" type="password" required="" value=""></div><input type="submit" data-wait="Please wait..." class="w-users-userformbutton button w-button" value="Log in">
           </div>
         </form>
-        <div style="display:none" data-wf-user-form-error="true" class="w-users-userformerrorstate form-error w-form-fail">
-          <div class="user-form-error-msg" wf-login-form-general-error-error="We&#x27;re having trouble logging you in. Please try again, or contact us if you continue to have problems." wf-login-form-invalid-email_or_password-error="Invalid email or password. Please try again.">We&#x27;re having trouble logging you in. Please try again, or contact us if you continue to have problems.</div>
-        </div>
       </div>
       <div class="w-users-userformfooter form-footer"><span class="small-text">Don&#x27;t have an account? </span>
         <a href="sign-up.html" class="small-text w-inline-block">Sign Up</a>
