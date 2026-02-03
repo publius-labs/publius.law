@@ -48,10 +48,10 @@
     <div class="account-wrapper">
       <div class="w-users-userloginformwrapper account-form-block">
         <div class="heading-four account-page-title">Log in</div>
-        <form class="account-form" action="https://app.publius.site" method="get" target="_blank">
+        <form id="login-form" class="account-form" action="https://app.publius.site" method="post">
           <div class="form-grid account-form">
-            <div class="input-group"><label for="wf-log-in-email" class="field-label">Email</label><input maxlength="256" placeholder="" name="email" id="wf-log-in-email" class="form-input white w-input" type="email" autocomplete="username" required="" value="ed@publius.law"></div>
-            <div class="input-group"><label for="wf-log-in-password" class="field-label-2">Password</label><input maxlength="256" placeholder="" name="password" id="wf-log-in-password" class="form-input white w-input" type="password" required="" value="123456"></div><input type="submit" data-wait="Please wait..." class="w-users-userformbutton button w-button" value="Log in">
+            <div class="input-group"><label for="wf-log-in-email" class="field-label">Email</label><input maxlength="256" placeholder="Enter your email" name="email" id="wf-log-in-email" class="form-input white w-input" type="email" autocomplete="username" required=""></div>
+            <div class="input-group"><label for="wf-log-in-password" class="field-label-2">Password</label><input maxlength="256" placeholder="Enter your password" name="password" id="wf-log-in-password" class="form-input white w-input" type="password" autocomplete="current-password" required=""></div><input type="submit" data-wait="Please wait..." class="w-users-userformbutton button w-button" value="Log in">
           </div>
         </form>
         <div style="display:none !important" data-wf-user-form-error="true" class="w-users-userformerrorstate form-error w-form-fail">

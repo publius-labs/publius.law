@@ -1327,6 +1327,28 @@ figcaption {
   background-color: var(--border-white);
 }
 
+.section.team-section .team-member-contact-details {
+  display: none;
+}
+
+.section.team-section .team-member-name-position {
+  flex-flow: column;
+  gap: 0;
+  row-gap: 0;
+}
+
+.section.team-section .team-member-name-position .heading-four {
+  margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.section.team-section .team-member-name-position .text-block-12 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .section.careers-title {
   background-color: #000;
   border: 1px #000;
@@ -1527,6 +1549,7 @@ figcaption {
 }
 
 .button {
+  border: 1px solid var(--very-dark-tone);
   background-color: var(--white);
   color: var(--very-dark-tone);
   text-align: center;
@@ -2788,6 +2811,10 @@ figcaption {
 .text-grid.request-demo-form-text-grid {
   grid-column-gap: 192px;
   grid-row-gap: 192px;
+}
+
+.text-grid.request-demo-form-text-grid .bordered-icon img {
+  filter: brightness(0);
 }
 
 .text-grid.contact-form-text-grid {
@@ -4409,6 +4436,14 @@ figcaption {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.team-member-name-position.text-left {
+  text-align: left;
+}
+
 .blog-title {
   grid-column-gap: 36px;
   grid-row-gap: 36px;
@@ -4535,6 +4570,11 @@ figcaption {
 .body-text---faded {
   color: var(--light-tone-text);
   -webkit-text-stroke-color: var(--white);
+}
+
+.contact-methods-wrapper .body-text---faded {
+  color: var(--very-dark-tone);
+  -webkit-text-stroke-color: var(--very-dark-tone);
 }
 
 .article-wrapper {
@@ -5318,6 +5358,10 @@ figcaption {
 
 .body-4 {
   background-color: var(--dark-tone-faded);
+}
+
+body.body-4 .circle-title-icon {
+  filter: brightness(0);
 }
 
 @media screen and (max-width: 991px) {

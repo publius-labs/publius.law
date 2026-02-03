@@ -1,43 +1,53 @@
-const LOGIN_ENDPOINT = 'http://publius-stg:8095/api/v1/auth/login';
 const DEFAULT_REDIRECT_URL = 'https://app.publius.site';
 
-async function handleLogin() {
+// Configure valid credentials here (for client-side demo only - use server-side auth in production)
+const VALID_CREDENTIALS = {
+  email: 'ed@publius.law',
+  password: '123456'
+};
 
-    console.log("attempting login");
-
-    try {
-
-        window.location.href = DEFAULT_REDIRECT_URL;
-
-    } catch (error) {
-        console.error("Login error:", error);
-    }
+function showError(message) {
+  const errorEl = document.querySelector('.w-users-userformerrorstate');
+  if (errorEl) {
+    errorEl.textContent = message;
+    errorEl.style.setProperty('display', 'block', 'important');
+  }
 }
 
-// Helper function: Uses Web Crypto API to create a SHA-256 hash
-async function hashString(message) {
-    // encode as (utf-8) Uint8Array
-    const msgBuffer = new TextEncoder().encode(message);
+function hideError() {
+  const errorEl = document.querySelector('.w-users-userformerrorstate');
+  if (errorEl) {
+    errorEl.textContent = '';
+    errorEl.style.setProperty('display', 'none', 'important');
+  }
+}
 
-    // hash the message
-    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+function handleLogin(event) {
+  event.preventDefault();
 
-    // convert ArrayBuffer to Array
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const form = document.getElementById('login-form');
+  if (!form) return;
 
-    // convert bytes to hex string
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    return hashHex;
+  const email = form.querySelector('#wf-log-in-email')?.value?.trim();
+  const password = form.querySelector('#wf-log-in-password')?.value;
+
+  hideError();
+
+  if (!email || !password) {
+    showError('Please enter your email and password.');
+    return;
+  }
+
+  if (email === VALID_CREDENTIALS.email && password === VALID_CREDENTIALS.password) {
+    window.location.href = DEFAULT_REDIRECT_URL;
+  } else {
+    showError('Invalid email or password. Please try again.');
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('form[data-wf-user-form-type="login"]');
-    if (!loginForm) {
-        return;
-    }
+  const loginForm = document.getElementById('login-form');
+  if (!loginForm) return;
 
-    loginForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        handleLogin();
-    });
+  loginForm.addEventListener('submit', handleLogin);
 });
