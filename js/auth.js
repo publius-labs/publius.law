@@ -1,4 +1,4 @@
-const LOGIN_ENDPOINT = 'https://publius-stg:8095/api/v1/auth/login';
+const LOGIN_ENDPOINT = 'http://publius-stg:8095/api/v1/auth/login';
 const DEFAULT_REDIRECT_URL = 'https://app.publius.law';
 
 async function handleLogin() {
