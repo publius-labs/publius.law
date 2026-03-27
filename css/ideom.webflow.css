@@ -2511,6 +2511,25 @@ figcaption {
   opacity: .5;
 }
 
+.footer-legal-links {
+  margin-top: 0.75rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-bottom-rows .footer-legal-links.small-text.muted {
+  opacity: 1;
+}
+
+.footer-legal-links .footer-legal-sep {
+  color: rgba(255, 255, 255, 0.55);
+  display: inline-block;
+  font-weight: 500;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  user-select: none;
+}
+
 .nav-logo-image {
   opacity: 1;
   text-align: left;
