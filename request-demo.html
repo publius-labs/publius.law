@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Demo - Publius</title>
+  <meta name="description" content="See how Publius can transform your legal practice. Request a personalized demo today.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="images/logo.png" alt="Publius"></a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__dropdown">
+          <a href="our-process.html" class="nav__dropdown-trigger">
+            Our Process
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown-menu">
+            <a href="our-process.html#phase-1" class="nav__dropdown-item">Case Intake</a>
+            <a href="our-process.html#phase-2" class="nav__dropdown-item">Data Normalization</a>
+            <a href="our-process.html#phase-3" class="nav__dropdown-item">Early Case Assessment</a>
+            <a href="our-process.html#phase-4" class="nav__dropdown-item">Document Review</a>
+          </div>
+        </li>
+        <li><a href="request-demo.html" class="nav__link nav__link--active">Request Demo</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__mobile-toggle" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="nav__mobile-menu">
+      <a href="index.html" class="nav__mobile-link">Home</a>
+      <div>
+        <button class="nav__mobile-dropdown-btn"><span>Our Process</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="nav__mobile-dropdown-items">
+          <a href="our-process.html#phase-1">Case Intake</a>
+          <a href="our-process.html#phase-2">Data Normalization</a>
+          <a href="our-process.html#phase-3">Early Case Assessment</a>
+          <a href="our-process.html#phase-4">Document Review</a>
+        </div>
+      </div>
+      <a href="request-demo.html" class="nav__mobile-link">Request Demo</a>
+      <a href="about.html" class="nav__mobile-link">About</a>
+      <a href="contact.html" class="nav__mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Header -->
+    <section class="page-header">
+      <div class="page-header__bg" style="background-image: url('images/hero.png')"></div>
+      <div class="page-header__overlay"></div>
+      <div class="page-header__content animate-on-scroll">
+        <h1 class="page-header__title">Request a Demo</h1>
+        <p class="page-header__subtitle">See how Publius can transform your legal practice</p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <div class="form-section__inner animate-on-scroll">
+        <div class="form-section__header">
+          <h2 class="form-section__title">Schedule Your Personalized Demo</h2>
+          <p class="form-section__subtitle">Fill out the form below and we'll reach out to schedule a time that works for you</p>
+        </div>
+
+        <form class="form" data-form="demo">
+          <div class="form__row">
+            <div class="form__group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required class="form__input">
+            </div>
+            <div class="form__group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required class="form__input">
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required class="form__input">
+          </div>
+
+<div class="form__group">
+            <label for="firmName">Law Firm Name *</label>
+            <input type="text" id="firmName" name="firmName" required class="form__input">
+          </div>
+
+          <div class="form__group">
+            <label for="firmSize">Firm Size *</label>
+            <select id="firmSize" name="firmSize" required class="form__select">
+              <option value="">Select firm size</option>
+              <option value="solo">Solo Practitioner</option>
+              <option value="2-10">2-10 Attorneys</option>
+              <option value="11-50">11-50 Attorneys</option>
+              <option value="51-100">51-100 Attorneys</option>
+              <option value="100+">100+ Attorneys</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="message">What would you like to learn about Publius?</label>
+            <textarea id="message" name="message" rows="5" class="form__textarea" placeholder="Tell us about your needs and what you'd like to see in the demo..."></textarea>
+          </div>
+
+          <button type="submit" class="form__submit">Submit Request</button>
+
+          <div class="form-message form-message--success" style="display:none">Thank you, we have received your request and will be in touch shortly.</div>
+          <div class="form-message form-message--error" style="display:none">Something went wrong. Please try again.</div>
+
+          <p class="form__disclaimer">
+            By submitting this form, you agree to receive communications from
+            Publius about our products and services.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="steps">
+      <div class="steps__inner">
+        <h2 class="steps__title animate-on-scroll">What to Expect</h2>
+        <div class="steps__grid">
+          <div class="step animate-on-scroll">
+            <div class="step__number">1</div>
+            <h3 class="step__title">Personalized Demo</h3>
+            <p class="step__text">A 30-minute walkthrough tailored to your firm's specific needs</p>
+          </div>
+          <div class="step animate-on-scroll" style="transition-delay: 0.2s">
+            <div class="step__number">2</div>
+            <h3 class="step__title">Q&A Session</h3>
+            <p class="step__text">Ask questions and explore how Publius fits your workflow</p>
+          </div>
+          <div class="step animate-on-scroll" style="transition-delay: 0.4s">
+            <div class="step__number">3</div>
+            <h3 class="step__title">Next Steps</h3>
+            <p class="step__text">Discuss pricing, implementation, and getting started</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <a href="index.html" class="footer__logo"><img src="images/logo.png" alt="Publius"></a>
+          <div class="footer__contact">
+            <div><h3 class="footer__contact-label">Email</h3><a href="mailto:info@publius.law" class="footer__contact-value">info@publius.law</a></div>
+          </div>
+        </div>
+        <div class="footer__subscribe">
+          <h3>Subscribe to receive early access when we go live.</h3>
+          <form class="footer__subscribe-form" data-form="subscribe">
+            <input type="email" name="EMAIL" placeholder="Your Email" class="footer__subscribe-input" required><input type="text" name="email_address_check" value="" style="display:none !important; position:absolute; left:-9999px;"><input type="hidden" name="locale" value="en">
+            <button type="submit" class="footer__subscribe-btn">Subscribe</button>
+            <div class="form-message form-message--success" style="display:none">Thank you! Your subscription has been successful.</div>
+            <div class="form-message form-message--error" style="display:none">Something went wrong. Please try again.</div>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__disclosure">Publius is an AI-powered legal technology platform designed to assist attorneys with discovery, research, and trial preparation. Publius does not provide legal advice and should not be relied upon as a substitute for independent professional judgment. Use of the platform does not create an attorney-client relationship. All users remain solely responsible for their legal work, ethical obligations, and compliance with applicable laws and professional rules.</p>
+        <div class="footer__meta">
+          <div class="footer__legal-links"><a href="legal.html">Legal Terms</a><span>|</span><a href="terms-of-service.html">Terms of Service</a></div>
+          <div class="footer__copyright-row">
+            <p class="footer__copyright">&copy; Publius 2026</p>
+            <div class="footer__social">
+              <a href="https://www.linkedin.com/company/publiuslegal/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="https://x.com/PubliusNews" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="X (Twitter)"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
