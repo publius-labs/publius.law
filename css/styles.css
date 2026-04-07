@@ -417,7 +417,7 @@ main {
 
 .hero__note {
   margin-top: 1.5rem;
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   color: rgba(255,255,255,0.7);
 }
 
@@ -478,7 +478,7 @@ main {
 /* ===== Page Headers ===== */
 .page-header {
   position: relative;
-  padding: 6rem 0;
+  padding: 2rem 0;
   overflow: hidden;
   margin-top: 5rem;
 }
@@ -1688,7 +1688,7 @@ a.contact-item__value:hover {
 
 .footer__disclosure {
   color: var(--gray-500);
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   max-width: 42rem;
   line-height: 1.6;
 }
@@ -1702,7 +1702,7 @@ a.contact-item__value:hover {
 .footer__legal-links {
   display: flex;
   gap: 1rem;
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   color: var(--gray-500);
 }
 
@@ -1726,7 +1726,7 @@ a.contact-item__value:hover {
 
 .footer__copyright {
   color: var(--gray-500);
-  font-size: 0.875rem;
+  font-size: 1.1rem;
 }
 
 .footer__social {
