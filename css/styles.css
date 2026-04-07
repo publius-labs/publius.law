@@ -1366,6 +1366,7 @@ a.contact-item__value:hover {
 }
 
 .faq__answer {
+  font-size: 1.1rem;
   color: var(--gray-600);
   line-height: 1.6;
 }
