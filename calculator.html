@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Cost Calculator — Publius</title>
+  <meta name="description" content="Estimate the cost of manual document review versus Publius. Compare staff labor costs, documents processed, and return on investment.">
+  <link rel="stylesheet" href="/assets/styles-CP-vRe7j.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180x180.png">
+  <style>
+    input[type="range"] {
+      width: 100%;
+      height: 2px;
+      appearance: none;
+      background: var(--hairline);
+      outline: none;
+      border-radius: 1px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0A0A0A;
+      cursor: pointer;
+      border: 2px solid #FAFAF5;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0A0A0A;
+      cursor: pointer;
+      border: 2px solid #FAFAF5;
+    }
+    .tier-btn {
+      border: 1px solid var(--hairline);
+      background: var(--ivory);
+      transition: all 0.2s ease;
+    }
+    .tier-btn:hover { border-color: #0A0A0A; }
+    .tier-btn.active {
+      background: #0A0A0A;
+      border-color: #0A0A0A;
+      color: #FAFAF5;
+    }
+    .tier-btn.active .tier-price { color: #FAFAF5; }
+    .calc-number {
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+    .calc-number::-webkit-outer-spin-button,
+    .calc-number::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen flex flex-col bg-background">
+    <!-- Header (calculator not in nav) -->
+    <header class="sticky top-0 z-50 bg-[var(--ivory)]/90 backdrop-blur-sm border-b border-[var(--hairline)]">
+      <div class="container-x flex h-16 items-center justify-between">
+        <a href="/" aria-label="Publius — Home" class="flex items-center">
+          <img src="/assets/publius-logo-CYq_9hn7.png" alt="Publius" class="h-7 w-auto" width="140" height="28">
+        </a>
+        <nav class="hidden md:flex items-center gap-9" aria-label="Main">
+          <a href="/" class="text-[13px] tracking-wide text-muted-foreground hover:text-foreground transition-colors">Home</a>
+          <a href="/process" class="text-[13px] tracking-wide text-muted-foreground hover:text-foreground transition-colors">Our Process</a>
+          <a href="/practice" class="text-[13px] tracking-wide text-muted-foreground hover:text-foreground transition-colors">Practice Areas</a>
+          <a href="/about" class="text-[13px] tracking-wide text-muted-foreground hover:text-foreground transition-colors">About</a>
+          <a href="/demo" class="text-[13px] tracking-wide text-muted-foreground hover:text-foreground transition-colors">Request Demo</a>
+          <a href="/contact" class="text-[13px] tracking-wide text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+        </nav>
+        <button id="mobile-toggle" class="md:hidden p-2 -mr-2 text-foreground" aria-label="Toggle menu" aria-expanded="false">
+          <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-[var(--hairline)] bg-[var(--ivory)]">
+        <nav class="container-x flex flex-col py-4 gap-1">
+          <a href="/" class="py-3 text-sm text-foreground">Home</a>
+          <a href="/process" class="py-3 text-sm text-foreground">Our Process</a>
+          <a href="/practice" class="py-3 text-sm text-foreground">Practice Areas</a>
+          <a href="/about" class="py-3 text-sm text-foreground">About</a>
+          <a href="/demo" class="py-3 text-sm text-foreground">Request Demo</a>
+          <a href="/contact" class="py-3 text-sm text-foreground">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- Hero -->
+      <section class="relative overflow-hidden bg-[var(--ink)]">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(10,10,10,0.65) 0%, rgba(10,10,10,0.55) 50%, rgba(10,10,10,0.7) 100%)"></div>
+        <div class="relative container-x min-h-[40vh] py-24 flex flex-col justify-end">
+          <p class="eyebrow text-[#FAFAF5]/75 mb-6">Calculator</p>
+          <h1 class="font-serif text-[#FAFAF5] leading-[0.95]" style="font-size:clamp(40px, 7vw, 80px);letter-spacing:-0.03em;font-weight:500">
+            Cost of manual labor per month.
+          </h1>
+          <p class="mt-6 max-w-2xl text-[17px] leading-relaxed text-[#FAFAF5]/80">
+            Compare staff document review costs against Publius subscription tiers and see your estimated return on investment.
+          </p>
+        </div>
+      </section>
+
+      <!-- Calculator -->
+      <section class="py-28 md:py-36" id="legal-cost-calculator">
+        <div class="container-x">
+          <div class="grid lg:grid-cols-2 gap-px bg-[var(--hairline)] border border-[var(--hairline)]">
+            <!-- Inputs -->
+            <div class="bg-[var(--ivory)] p-8 md:p-12 space-y-10">
+              <div>
+                <label for="billable-staff" class="eyebrow text-muted-foreground">Number of employees</label>
+                <input type="number" id="billable-staff" name="billable-staff" value="3" min="0" step="1"
+                  class="calc-number mt-3 w-full bg-transparent border-b border-foreground/30 py-3 text-[15px] font-serif text-2xl focus:outline-none focus:border-foreground">
+              </div>
+
+              <div>
+                <div class="flex justify-between items-baseline">
+                  <label for="daily-hours" class="eyebrow text-muted-foreground">Hours spent per day</label>
+                  <span id="daily-hours-value" class="font-serif text-xl">0 hours</span>
+                </div>
+                <input type="range" id="daily-hours" name="daily-hours" min="0" max="8" step="0.5" value="0" class="mt-4">
+              </div>
+
+              <div>
+                <label for="hourly-rate" class="eyebrow text-muted-foreground">Hourly rate ($)</label>
+                <input type="number" id="hourly-rate" name="hourly-rate" value="70" min="0" step="10"
+                  class="calc-number mt-3 w-full bg-transparent border-b border-foreground/30 py-3 text-[15px] font-serif text-2xl focus:outline-none focus:border-foreground">
+              </div>
+
+              <div>
+                <div class="flex justify-between items-baseline">
+                  <label for="documents-per-hour" class="eyebrow text-muted-foreground">Documents you process per hour</label>
+                  <span id="documents-per-hour-value" class="font-serif text-xl">1 document</span>
+                </div>
+                <input type="range" id="documents-per-hour" name="documents-per-hour" min="0" max="7" step="1" value="0" class="mt-4">
+              </div>
+
+              <div>
+                <p class="eyebrow text-muted-foreground mb-4">Publius tier</p>
+                <div class="grid grid-cols-3 gap-px bg-[var(--hairline)] border border-[var(--hairline)]">
+                  <button type="button" class="tier-btn p-5 text-center" data-tier="solo" data-price="199" data-docs="5">
+                    <span class="block text-[12px] uppercase tracking-[0.1em]">Solo</span>
+                    <span class="tier-price block font-serif text-2xl mt-1">$199</span>
+                  </button>
+                  <button type="button" class="tier-btn active p-5 text-center" data-tier="firm" data-price="399" data-docs="20">
+                    <span class="block text-[12px] uppercase tracking-[0.1em]">Firm</span>
+                    <span class="tier-price block font-serif text-2xl mt-1">$399</span>
+                  </button>
+                  <button type="button" class="tier-btn p-5 text-center" data-tier="litigator" data-price="599" data-docs="50">
+                    <span class="block text-[12px] uppercase tracking-[0.1em]">Litigator</span>
+                    <span class="tier-price block font-serif text-2xl mt-1">$599</span>
+                  </button>
+                </div>
+              </div>
+
+              <button type="button" id="reset-button"
+                class="w-full border border-foreground/30 py-3 text-[13px] uppercase tracking-[0.12em] hover:bg-foreground hover:text-background transition-colors">
+                Reset calculator
+              </button>
+            </div>
+
+            <!-- Results -->
+            <div class="bg-[var(--ivory)] p-8 md:p-12 flex flex-col">
+              <p class="eyebrow text-muted-foreground mb-8">Results</p>
+
+              <div class="text-center pb-10 border-b border-[var(--hairline)]">
+                <p class="text-[13px] uppercase tracking-[0.14em] text-muted-foreground">Estimated monthly cost</p>
+                <p id="revenue-increase" class="font-serif mt-3" style="font-size:clamp(40px, 6vw, 56px);letter-spacing:-0.02em">$0</p>
+              </div>
+
+              <dl class="mt-8 space-y-0 flex-1">
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Monthly admin hours saved</dt>
+                  <dd id="admin-hours-saved" class="font-serif text-xl">0 hours</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Your staff documents processed</dt>
+                  <dd id="user-documents" class="font-serif text-xl">0</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Publius documents processed</dt>
+                  <dd id="publius-documents" class="font-serif text-xl">0</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Total documents processed</dt>
+                  <dd id="total-documents" class="font-serif text-xl">0</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Cost per document (staff)</dt>
+                  <dd id="labor-cost-per-doc" class="font-serif text-xl">$0.00</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Cost per document (Publius)</dt>
+                  <dd id="cost-per-document" class="font-serif text-xl">$0.00</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Total cost for staff processing</dt>
+                  <dd id="total-staff-cost" class="font-serif text-xl">$0</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-4 border-b border-[var(--hairline)]">
+                  <dt class="text-[14px] text-muted-foreground">Monthly Publius subscription</dt>
+                  <dd id="monthly-cost" class="font-serif text-xl">$399</dd>
+                </div>
+                <div class="flex justify-between items-baseline py-6">
+                  <dt class="text-[14px] uppercase tracking-[0.1em] text-foreground">Return on investment</dt>
+                  <dd id="roi" class="font-serif text-3xl">0x</dd>
+                </div>
+              </dl>
+
+              <a href="/demo" class="mt-8 inline-flex items-center justify-center gap-2 bg-[#0A0A0A] text-[#FAFAF5] rounded-[2px] px-7 py-[14px] text-[14px] uppercase tracking-[0.04em] hover:opacity-85 transition-opacity w-full md:w-auto text-center">
+                Request a demo <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative text-[#FAFAF5] mt-32 bg-sepia-dark">
+      <div class="container-x py-20">
+        <div class="grid gap-14 md:grid-cols-12">
+          <div class="md:col-span-5">
+            <a href="/" aria-label="Publius — Home" class="inline-flex items-center">
+              <img src="/assets/publius-logo-CYq_9hn7.png" alt="Publius" class="h-9 w-auto invert" width="180" height="36">
+            </a>
+            <p class="mt-5 text-sm text-white/60 max-w-sm leading-relaxed">
+              AI-powered legal technology built for small and midsize firms.
+            </p>
+            <a href="mailto:info@publius.law" class="mt-4 inline-block text-sm text-white/80 hover:text-white border-b border-white/20 hover:border-white pb-px">info@publius.law</a>
+          </div>
+          <div class="md:col-span-4 md:col-start-7">
+            <p class="eyebrow text-white/60">Early Access</p>
+            <p class="mt-3 text-sm text-white/80 leading-relaxed">Subscribe to receive early access when we go live.</p>
+            <form id="subscribe-form" class="mt-5 flex border-b border-white/30"
+              action="https://7f9e7916.sibforms.com/serve/MUIFAPZRWBTufYeaMiseC6GamVvUNwZmOoilO8_335uVHxzDG4Vjhzf0HrWmUmyDRCiZCVeloTqFESOfK2t_xO0lx4cb0y-L7MggPXe80OG4hwcnrCs_pJ7xeRRNtA32oNAk4K71p2-GweejjrKslB2cvwPmOkte0yNTbb7qmyJsMvDkGIxz72kbr0Fjg9veAb1M7-szY3f05iuGrw=="
+              method="POST" target="brevo-subscribe-frame">
+              <input type="email" name="EMAIL" required placeholder="you@firm.com" class="flex-1 bg-transparent py-3 text-sm placeholder-white/40 focus:outline-none">
+              <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
+              <input type="hidden" name="locale" value="en">
+              <button type="submit" class="text-[12px] uppercase tracking-[0.12em] text-white/80 hover:text-white pl-4">Subscribe →</button>
+            </form>
+            <p id="subscribe-success" class="mt-3 text-xs text-white/60 hidden">Thank you — we'll be in touch.</p>
+          </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-white/10 flex flex-wrap gap-6 items-center justify-between">
+          <div class="flex flex-wrap gap-6 text-[12px] uppercase tracking-[0.14em] text-white/60">
+            <a href="/legal-terms" class="hover:text-white">Legal Terms</a>
+            <a href="/terms-of-service" class="hover:text-white">Terms of Service</a>
+          </div>
+          <div class="flex gap-6 text-[12px] uppercase tracking-[0.14em] text-white/60">
+            <a href="https://www.linkedin.com/company/publiuslegal/" target="_blank" rel="noopener noreferrer" class="hover:text-white">LinkedIn</a>
+            <a href="https://x.com/PubliusNews" target="_blank" rel="noopener noreferrer" class="hover:text-white">X</a>
+          </div>
+        </div>
+        <p class="mt-10 text-xs leading-relaxed text-white/50 max-w-3xl">
+          Publius is an AI-powered legal technology platform designed to assist attorneys with discovery, research, and trial preparation.
+          Publius does not provide legal advice and should not be relied upon as a substitute for independent professional judgment.
+        </p>
+        <p class="mt-10 text-xs text-white/40">© Publius 2026</p>
+      </div>
+      <iframe name="brevo-subscribe-frame" title="Newsletter signup" hidden></iframe>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile nav
+    (function () {
+      var toggle = document.getElementById('mobile-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var iconMenu = document.getElementById('icon-menu');
+      var iconClose = document.getElementById('icon-close');
+      toggle.addEventListener('click', function () {
+        var open = menu.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        iconMenu.classList.toggle('hidden', !open);
+        iconClose.classList.toggle('hidden', open);
+      });
+    })();
+
+    // Subscribe success message
+    document.getElementById('subscribe-form').addEventListener('submit', function () {
+      document.getElementById('subscribe-success').classList.remove('hidden');
+    });
+
+    // Calculator
+    (function () {
+      var WORKING_DAYS_PER_MONTH = 22;
+      var DOCUMENTS_PER_HOUR_VALUES = [1, 5, 10, 15, 20, 30, 50, 100];
+      var selectedTierPrice = 399;
+      var publiusDocsAmount = 20;
+
+      var currencyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+      var costPerDocFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      var numberFormatter = new Intl.NumberFormat('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+      var billableStaffInput = document.getElementById('billable-staff');
+      var dailyHoursSlider = document.getElementById('daily-hours');
+      var hourlyRateInput = document.getElementById('hourly-rate');
+      var documentsPerHourSlider = document.getElementById('documents-per-hour');
+      var tierButtons = document.querySelectorAll('.tier-btn');
+      var resetButton = document.getElementById('reset-button');
+      var dailyHoursValue = document.getElementById('daily-hours-value');
+      var documentsPerHourValue = document.getElementById('documents-per-hour-value');
+      var revenueIncreaseEl = document.getElementById('revenue-increase');
+      var adminHoursSavedEl = document.getElementById('admin-hours-saved');
+      var userDocumentsEl = document.getElementById('user-documents');
+      var publiusDocumentsEl = document.getElementById('publius-documents');
+      var totalDocumentsEl = document.getElementById('total-documents');
+      var totalStaffCostEl = document.getElementById('total-staff-cost');
+      var laborCostPerDocEl = document.getElementById('labor-cost-per-doc');
+      var costPerDocumentEl = document.getElementById('cost-per-document');
+      var monthlyCostEl = document.getElementById('monthly-cost');
+      var roiEl = document.getElementById('roi');
+
+      function updateSliderDisplays() {
+        var dailyHours = parseFloat(dailyHoursSlider.value);
+        var sliderIndex = parseInt(documentsPerHourSlider.value, 10);
+        var documentsPerHour = DOCUMENTS_PER_HOUR_VALUES[sliderIndex];
+        dailyHoursValue.textContent = dailyHours === 1 ? '1 hour' : dailyHours + ' hours';
+        documentsPerHourValue.textContent = documentsPerHour === 1 ? '1 document' : documentsPerHour + ' documents';
+      }
+
+      function calculateROI() {
+        var billableStaff = parseFloat(billableStaffInput.value) || 0;
+        var dailyHours = parseFloat(dailyHoursSlider.value) || 0;
+        var hourlyRate = parseFloat(hourlyRateInput.value) || 0;
+        var sliderIndex = parseInt(documentsPerHourSlider.value, 10);
+        var documentsPerHour = DOCUMENTS_PER_HOUR_VALUES[sliderIndex];
+        var monthlyCost = selectedTierPrice;
+        var revenueIncrease = billableStaff * dailyHours * hourlyRate * WORKING_DAYS_PER_MONTH;
+        var adminHoursSaved = dailyHours * WORKING_DAYS_PER_MONTH;
+        var userMonthlyDocuments = documentsPerHour * dailyHours * WORKING_DAYS_PER_MONTH;
+        var publiusMonthlyDocuments = publiusDocsAmount * 30;
+        var totalMonthlyDocuments = userMonthlyDocuments + publiusMonthlyDocuments;
+        var laborCostPerDoc = documentsPerHour > 0 ? hourlyRate / documentsPerHour : 0;
+        var totalStaffProcessingCost = hourlyRate * billableStaff * dailyHours * WORKING_DAYS_PER_MONTH;
+        var costPerDocument = totalMonthlyDocuments > 0 ? monthlyCost / totalMonthlyDocuments : 0;
+        var roi = monthlyCost > 0 ? revenueIncrease / monthlyCost : 0;
+
+        revenueIncreaseEl.textContent = dailyHours > 0 ? currencyFormatter.format(revenueIncrease) : '—';
+        adminHoursSavedEl.textContent = dailyHours > 0 ? adminHoursSaved + ' hours' : '—';
+        userDocumentsEl.textContent = dailyHours > 0 ? numberFormatter.format(userMonthlyDocuments) : '—';
+        publiusDocumentsEl.textContent = numberFormatter.format(publiusMonthlyDocuments);
+        totalDocumentsEl.textContent = numberFormatter.format(totalMonthlyDocuments);
+        totalStaffCostEl.textContent = dailyHours > 0 ? currencyFormatter.format(totalStaffProcessingCost) : '—';
+        laborCostPerDocEl.textContent = (dailyHours > 0 && documentsPerHour > 0) ? costPerDocFormatter.format(laborCostPerDoc) : '—';
+        costPerDocumentEl.textContent = totalMonthlyDocuments > 0 ? costPerDocFormatter.format(costPerDocument) : '—';
+        monthlyCostEl.textContent = currencyFormatter.format(monthlyCost);
+        roiEl.textContent = roi >= 1 ? Math.round(roi) + 'x' : roi > 0 ? roi.toFixed(1) + 'x' : '0x';
+        updateSliderDisplays();
+      }
+
+      function resetCalculator() {
+        billableStaffInput.value = 3;
+        dailyHoursSlider.value = 0;
+        hourlyRateInput.value = 70;
+        documentsPerHourSlider.value = 0;
+        selectedTierPrice = 399;
+        publiusDocsAmount = 20;
+        tierButtons.forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.tier === 'firm');
+        });
+        calculateROI();
+      }
+
+      tierButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          tierButtons.forEach(function (btn) { btn.classList.remove('active'); });
+          button.classList.add('active');
+          selectedTierPrice = parseInt(button.dataset.price, 10);
+          publiusDocsAmount = parseInt(button.dataset.docs, 10);
+          calculateROI();
+        });
+      });
+
+      billableStaffInput.addEventListener('input', calculateROI);
+      dailyHoursSlider.addEventListener('input', calculateROI);
+      hourlyRateInput.addEventListener('input', calculateROI);
+      documentsPerHourSlider.addEventListener('input', calculateROI);
+      resetButton.addEventListener('click', resetCalculator);
+      resetCalculator();
+    })();
+  </script>
+</body>
+</html>
