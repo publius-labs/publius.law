@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publius Legal — Competitive Landscape</title>
+<style>
+  :root {
+    --bg: #0f1216;
+    --card: #1a1f26;
+    --border: #2a323c;
+    --text: #e8ebee;
+    --muted: #9aa4af;
+    --accent: #4da3ff;
+    --high: #ff6b6b;
+    --med: #ffb454;
+    --low: #4cd97b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); padding: 32px 24px 64px; }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+  header.page { margin-bottom: 28px; }
+  header.page h1 { font-size: 28px; margin-bottom: 6px; }
+  header.page p { color: var(--muted); font-size: 14px; line-height: 1.5; max-width: 760px; }
+  .meta { color: var(--muted); font-size: 12px; margin-top: 10px; }
+  h2.category { font-size: 18px; margin: 40px 0 4px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  p.category-note { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; margin-top: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform .15s ease, border-color .15s ease; }
+  .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .shot { position: relative; aspect-ratio: 16/9; background: #10141a; overflow: hidden; cursor: pointer; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+  .shot .loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; }
+  .badge { position: absolute; top: 10px; right: 10px; font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 4px 8px; border-radius: 20px; color: #111; }
+  .badge.high { background: var(--high); }
+  .badge.med { background: var(--med); }
+  .badge.low { background: var(--low); }
+  .badge.watch { background: #b48cff; }
+  .badge.partner { background: #7fd8ff; }
+  .body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+  .body h3 { font-size: 16px; }
+  .body h3 a { color: var(--text); text-decoration: none; }
+  .body h3 a:hover { color: var(--accent); }
+  .url { font-size: 12px; }
+  .url a { color: var(--accent); text-decoration: none; word-break: break-all; }
+  .pos { color: var(--muted); font-size: 13px; line-height: 1.45; }
+  .facts { font-size: 12.5px; color: var(--text); line-height: 1.5; border-top: 1px dashed var(--border); padding-top: 8px; margin-top: 4px; }
+  .facts b { color: var(--accent); font-weight: 600; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; font-size: 11px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>Competitive Landscape — Publius Legal (Case Intelligence)</h1>
+  <p>Competitors, adjacent platforms, and monitoring targets from your competitive analysis, organized by category with links and live home-page captures.</p>
+  <div class="meta">Compiled September 18, 2026 &middot; Source: <a href="https://drive.google.com/file/d/1uRWNNVtJ0RkaVr8Dmm9sXWdxjUBNE9WA/view?usp=drivesdk" style="color:var(--accent)">CompetativeAnalysis-Publius.pdf</a></div>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--high)"></i> High threat — direct overlap</span>
+    <span><i class="dot" style="background:var(--med)"></i> Medium threat — partial overlap</span>
+    <span><i class="dot" style="background:var(--low)"></i> Low threat — different segment / partner</span>
+    <span><i class="dot" style="background:#b48cff"></i> Watchlist</span>
+    <span><i class="dot" style="background:#7fd8ff"></i> Partner / integration candidate</span>
+  </div>
+</header>
+
+<h2 class="category">1. Enterprise Legal AI Platforms</h2>
+<p class="category-note">Target BigLaw / Fortune 500 — threat level low for your small-firm segment, but watch for downmarket moves.</p>
+<div class="grid">
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.harvey.ai/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.harvey.ai/" alt="Harvey AI home page">
+      <span class="badge low">Low threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.harvey.ai/" target="_blank">Harvey AI</a></h3>
+      <div class="url"><a href="https://www.harvey.ai/" target="_blank">harvey.ai</a></div>
+      <div class="pos">Enterprise Legal AI leader — research, drafting, document analysis.</div>
+      <div class="facts"><b>Valuation:</b> $3–5B (Series D, 2025) &middot; <b>Revenue:</b> ~$75M ARR &middot; <b>Pricing:</b> enterprise-only, est. $500K+/yr &middot; <b>Note:</b> LexisNexis alliance (2025); top scorer in Vals Legal AI Report.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.alexi.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.alexi.com/" alt="Alexi home page">
+      <span class="badge low">Low threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.alexi.com/" target="_blank">Alexi</a></h3>
+      <div class="url"><a href="https://www.alexi.com/" target="_blank">alexi.com</a></div>
+      <div class="pos">Enterprise litigation intelligence platform — strong in the Canadian market.</div>
+      <div class="facts"><b>Funding:</b> ~$11M Series A &middot; <b>Deployment:</b> private cloud &middot; <b>Watch:</b> expanded from litigation into transactional workflow library (Nov 2025).</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://robinai.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://robinai.com/" alt="Robin AI home page">
+      <span class="badge low">Low threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://robinai.com/" target="_blank">Robin AI</a></h3>
+      <div class="url"><a href="https://robinai.com/" target="_blank">robinai.com</a></div>
+      <div class="pos">Contract intelligence for enterprises (Pfizer, KPMG, UBS).</div>
+      <div class="facts"><b>Growth:</b> 227% annually &middot; <b>Pricing:</b> $299–499/mo, enterprise custom &middot; Transactional/contract focus, not litigation.</div>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="category">2. eDiscovery & Review Platforms</h2>
+<p class="category-note">Direct competitors on document review and processing — the highest-threat category.</p>
+<div class="grid">
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.relativity.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.relativity.com/" alt="Relativity home page">
+      <span class="badge high">High threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.relativity.com/" target="_blank">RelativityOne</a></h3>
+      <div class="url"><a href="https://www.relativity.com/" target="_blank">relativity.com</a></div>
+      <div class="pos">Industry standard for large-scale eDiscovery.</div>
+      <div class="facts"><b>Pricing:</b> $20K+ for a 2-month project license &middot; Gold standard at scale, but overkill for sub-100K-document cases &middot; <b>Your angle:</b> ~90% cheaper, no training required.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.everlaw.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.everlaw.com/" alt="Everlaw home page">
+      <span class="badge high">High threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.everlaw.com/" target="_blank">Everlaw</a></h3>
+      <div class="url"><a href="https://www.everlaw.com/" target="_blank">everlaw.com</a></div>
+      <div class="pos">Modern cloud-based eDiscovery — strong government adoption (FedRAMP).</div>
+      <div class="facts"><b>Pricing:</b> ~$250/mo entry + $10–20/GB/mo hosting &middot; No AI case analysis or trial-prep tools &middot; <b>Your angle:</b> flat fee, ~40% cheaper.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.csdisco.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.csdisco.com/" alt="DISCO home page">
+      <span class="badge high">High threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.csdisco.com/" target="_blank">DISCO</a></h3>
+      <div class="url"><a href="https://www.csdisco.com/" target="_blank">csdisco.com</a></div>
+      <div class="pos">Cloud eDiscovery with lower TCO than Relativity.</div>
+      <div class="facts">Fast, cloud-native, modern UI &middot; Mid-market pricing, basic AI, no integrated research or trial presentation &middot; Price-sensitive evaluators are conversion targets.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.logikcull.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.logikcull.com/" alt="Logikcull home page">
+      <span class="badge high">High threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.logikcull.com/" target="_blank">Logikcull</a></h3>
+      <div class="url"><a href="https://www.logikcull.com/" target="_blank">logikcull.com</a></div>
+      <div class="pos">Simplified eDiscovery for small-to-mid market — your closest direct competitor.</div>
+      <div class="facts"><b>Pricing:</b> limited free tier (10GB, no export), paid tier required for export &middot; Targets your exact segment &middot; <b>Threat:</b> could add sophisticated AI — differentiate on AI depth and workflow completeness.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.nuix.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.nuix.com/" alt="Nuix home page">
+      <span class="badge high">High threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.nuix.com/" target="_blank">Nuix</a></h3>
+      <div class="url"><a href="https://www.nuix.com/" target="_blank">nuix.com</a></div>
+      <div class="pos">Enterprise-grade processing engine (government, law enforcement).</div>
+      <div class="facts">Excellent data processing/extraction but not a primary review platform — requires tool-stitching, enterprise pricing, steep learning curve.</div>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="category">3. Point Solution AI Tools</h2>
+<p class="category-note">Small-to-mid firm tools with partial feature overlap — some are partner or acquisition candidates.</p>
+<div class="grid">
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.paxton.ai/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.paxton.ai/" alt="Paxton AI home page">
+      <span class="badge med">Med threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.paxton.ai/" target="_blank">Paxton AI</a></h3>
+      <div class="url"><a href="https://www.paxton.ai/" target="_blank">paxton.ai</a></div>
+      <div class="pos">All-in-one AI legal assistant for solo and small firms — research, drafting, matter support.</div>
+      <div class="facts"><b>Pricing:</b> ~$159/mo &middot; Directly targets your segment &middot; Compliance-aware messaging (ABA Formal Opinion 512) &middot; Weak on eDiscovery ingestion and multi-agent orchestration.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.supio.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.supio.com/" alt="Supio home page">
+      <span class="badge med">Med threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.supio.com/" target="_blank">Supio</a></h3>
+      <div class="url"><a href="https://www.supio.com/" target="_blank">supio.com</a></div>
+      <div class="pos">AI for personal injury & mass tort — medical records analysis, demand letters.</div>
+      <div class="facts"><b>Funding:</b> $60M Series B (April 2025), 4× ARR growth &middot; Niche PI focus; Westlaw Advantage integration &middot; Partnership potential for PI-specific features.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://casetext.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://casetext.com/" alt="Casetext CoCounsel home page">
+      <span class="badge med">Med threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://casetext.com/" target="_blank">Casetext CoCounsel (Thomson Reuters)</a></h3>
+      <div class="url"><a href="https://casetext.com/" target="_blank">casetext.com</a></div>
+      <div class="pos">AI legal research & drafting assistant.</div>
+      <div class="facts"><b>Pricing:</b> $80–135/mo base, +$250/mo AI drafting, $12/document review &middot; Second-highest Vals AI performer &middot; Research-only — per-doc add-ons add up.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.gideonlegal.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.gideonlegal.com/" alt="Gideon home page">
+      <span class="badge med">Med threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.gideonlegal.com/" target="_blank">Gideon</a></h3>
+      <div class="url"><a href="https://www.gideonlegal.com/" target="_blank">gideonlegal.com</a></div>
+      <div class="pos">Client intake & document automation, part of the Clio ecosystem.</div>
+      <div class="facts">Conversational intake reduces admin burden &middot; No case viability analysis, document review, or trial prep — covers only your Phase 1.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://vlex.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://vlex.com/" alt="Vincent AI vLex home page">
+      <span class="badge med">Med threat</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://vlex.com/" target="_blank">Vincent AI (vLex)</a></h3>
+      <div class="url"><a href="https://vlex.com/" target="_blank">vlex.com</a></div>
+      <div class="pos">Global legal research & analysis platform (multi-jurisdictional).</div>
+      <div class="facts">Strong US + EU breadth, rigorous link-backs &middot; Research-focused — no eDiscovery, document processing, or evidence management.</div>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="category">4. Legal Research Platforms</h2>
+<p class="category-note">Low threat — complementary; potential integration partners (position as the workflow layer on their data).</p>
+<div class="grid">
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.lexisnexis.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.lexisnexis.com/" alt="LexisNexis home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.lexisnexis.com/" target="_blank">LexisNexis</a></h3>
+      <div class="url"><a href="https://www.lexisnexis.com/" target="_blank">lexisnexis.com</a></div>
+      <div class="pos">Dominant legal research duopoly.</div>
+      <div class="facts"><b>Pricing:</b> $153–399+/mo &middot; Harvey alliance (2025) shows the playbook — integrate their research APIs the same way.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://legal.thomsonreuters.com/en/westlaw','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://legal.thomsonreuters.com/en/westlaw" alt="Westlaw home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://legal.thomsonreuters.com/en/westlaw" target="_blank">Westlaw</a></h3>
+      <div class="url"><a href="https://legal.thomsonreuters.com/en/westlaw" target="_blank">legal.thomsonreuters.com/en/westlaw</a></div>
+      <div class="pos">Dominant legal research duopoly (Thomson Reuters).</div>
+      <div class="facts"><b>Pricing:</b> $111–582+/mo &middot; Research database only — API integration opportunity.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.fastcase.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.fastcase.com/" alt="Fastcase home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.fastcase.com/" target="_blank">Fastcase</a></h3>
+      <div class="url"><a href="https://www.fastcase.com/" target="_blank">fastcase.com</a></div>
+      <div class="pos">Affordable research for small firms — often free through bar associations.</div>
+      <div class="facts"><b>Pricing:</b> $65–95/mo &middot; Now part of vLex &middot; Bar-association channel is a potential distribution lever.</div>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="category">5. Emerging Competitors to Watch</h2>
+<p class="category-note">Watchlist — validates the legal AI market; watch for feature expansion.</p>
+<div class="grid">
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.eve.legal/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.eve.legal/" alt="Eve home page">
+      <span class="badge watch">Watchlist</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.eve.legal/" target="_blank">Eve (EveOS)</a></h3>
+      <div class="url"><a href="https://www.eve.legal/" target="_blank">eve.legal</a></div>
+      <div class="pos">Plaintiff-lawyer AI — case evaluation, drafting, discovery.</div>
+      <div class="facts"><b>Valuation:</b> $1B unicorn &middot; Rebranded to EveOS as an all-in-one platform for plaintiff firms (2026) &middot; Different market (plaintiffs), but proof of investor appetite for legal AI.</div>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="category">6. Tools Landscape — Partners & Budget Alternatives</h2>
+<p class="category-note">Adjacent point tools from your tools-landscape research — integration candidates or tools your users may pair with you.</p>
+<div class="grid">
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.gavel.io/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.gavel.io/" alt="Gavel Exec home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.gavel.io/" target="_blank">Gavel (Gavel Exec)</a></h3>
+      <div class="url"><a href="https://www.gavel.io/" target="_blank">gavel.io</a></div>
+      <div class="pos">AI contract review & document automation in Word and online.</div>
+      <div class="facts"><b>Pricing:</b> ~$160/mo per user &middot; Inline clause review, playbook workflows; now a full web + Word AI workspace.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.lawinsider.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.lawinsider.com/" alt="LawInsider home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.lawinsider.com/" target="_blank">LawInsider</a></h3>
+      <div class="url"><a href="https://www.lawinsider.com/" target="_blank">lawinsider.com</a></div>
+      <div class="pos">Word add-in with EDGAR-sourced contract corpus and best-practice checks.</div>
+      <div class="facts"><b>Pricing:</b> ~$425/yr &middot; Largest public contract database; acquired by SimpleDocs (2025) &middot; Good for market-standard clause benchmarking.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.contractken.com/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.contractken.com/" alt="ContractKen home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.contractken.com/" target="_blank">ContractKen</a></h3>
+      <div class="url"><a href="https://www.contractken.com/" target="_blank">contractken.com</a></div>
+      <div class="pos">Secondary scan — flags risks, ambiguities, favorable/missing clauses in Word.</div>
+      <div class="facts"><b>Pricing:</b> ~$1,188/yr &middot; QA layer your Review module could subsume or integrate.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.sonar.legal/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.sonar.legal/" alt="Sonar Legal home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.sonar.legal/" target="_blank">Sonar Legal</a></h3>
+      <div class="url"><a href="https://www.sonar.legal/" target="_blank">sonar.legal</a></div>
+      <div class="pos">Technical QA — cross-references, undefined terms, formatting, inside Word/Outlook.</div>
+      <div class="facts"><b>Pricing:</b> ~$62/mo &middot; Best as a last-mile checker.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.aline.co/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.aline.co/" alt="Aline home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.aline.co/" target="_blank">Aline</a></h3>
+      <div class="url"><a href="https://www.aline.co/" target="_blank">aline.co</a></div>
+      <div class="pos">Long-form contract generation with light CLM, e-signature, and repository.</div>
+      <div class="facts"><b>Pricing:</b> ~$2,400/yr &middot; Strong drafting; lighter on deep review.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://core.iqidis.ai/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://core.iqidis.ai/" alt="Iqidis home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://core.iqidis.ai/" target="_blank">Iqidis (Irys AI)</a></h3>
+      <div class="url"><a href="https://core.iqidis.ai/" target="_blank">core.iqidis.ai</a></div>
+      <div class="pos">Memo-style AI research outputs; free PRO queries per day.</div>
+      <div class="facts"><b>Pricing:</b> ~$249/mo &middot; Budget alternative users may pair with you; complements vLex.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shot" onclick="window.open('https://www.midpage.ai/','_blank')">
+      <div class="loading">Loading screenshot…</div>
+      <img data-src="https://www.midpage.ai/" alt="Midpage home page">
+      <span class="badge partner">Partner</span>
+    </div>
+    <div class="body">
+      <h3><a href="https://www.midpage.ai/" target="_blank">Midpage</a></h3>
+      <div class="url"><a href="https://www.midpage.ai/" target="_blank">midpage.ai</a></div>
+      <div class="pos">Lean, US-first AI research (proposition search) and drafting.</div>
+      <div class="facts"><b>Pricing:</b> ~$99/mo &middot; Trusted by 200+ firms; Litera integration (2026) &middot; Budget-friendly research layer.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Threat levels, pricing, and positioning drawn from your July 2026 competitive analysis; websites verified September 18, 2026.<br>
+  Home-page images are rendered live via WordPress mShots. On first request mShots returns a placeholder while it generates the capture, so the page automatically re-requests each image after 6 seconds — the full screenshots will appear within a few seconds of opening the page. Refresh the page to get fresh captures. Click any image to visit the site.
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var MSHOTS = 'https://s0.wp.com/mshots/v1/';
+  document.querySelectorAll('img[data-src]').forEach(function (img) {
+    var url = img.getAttribute('data-src');
+    var attempt = 0;
+    function load() {
+      img.src = MSHOTS + encodeURIComponent(url) + '?w=900&h=510&r=' + Date.now();
+    }
+    img.onload = function () {
+      var loading = img.parentElement.querySelector('.loading');
+      if (loading) loading.style.display = 'none';
+      img.style.opacity = 1;
+      if (attempt === 0) {
+        attempt = 1;
+        setTimeout(load, 6000);
+      }
+    };
+    img.onerror = function () {
+      if (attempt < 2) {
+        attempt++;
+        setTimeout(load, attempt === 1 ? 6000 : 10000);
+      } else {
+        var loading = img.parentElement.querySelector('.loading');
+        if (loading) loading.textContent = 'Screenshot unavailable — click to visit site';
+        img.style.display = 'none';
+      }
+    };
+    img.style.opacity = 0;
+    img.style.transition = 'opacity .4s ease';
+    load();
+  });
+})();
+</script>
+</body>
+</html>
