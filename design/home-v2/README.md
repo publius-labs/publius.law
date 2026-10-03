@@ -1,15 +1,13 @@
-# Home v2 (design exploration, not live)
+# Home v2 (design source)
 
-Source for the Publius Home redesign explored in Claude Design. This branch is not deployed; `main` and publius.law are unchanged.
+Source for the Publius Home redesign explored in Claude Design. The shipped homepage is `/index.html`, generated from `HomeV2.dc.html`; its images and video are in `/assets/home/`.
 
 - `HomeV2.dc.html` — Home v2 board. `Main.dc.html` — faithful recreation of the current home page for comparison.
 - `canvas.json` — board layout. `design-system/` — tokens and README derived from the live stylesheet.
 - `assets/public/` — supporter logos (AWS, Innovative, Ben Franklin Technology Partners). Check each owner's brand-use rules before public use.
 
-## Assets held back (referenced as `/_blob/<id>` in the HTML, stored only in the design artifact)
-This repo is public, so these were deliberately not committed:
-- Product screenshots and video (case Overview, Analysis, data relationships, document-research recording). They show real case data and need a demo-data / fictional-matter review first.
-- Attorney headshot and named testimonial attribution. Need written permission.
+## Assets
+The `.dc.html` files reference product screenshots, the video and the headshot as `/_blob/<id>` (stored in the design artifact). The production copies are in `/assets/home/`.
 
 ## Open items before any live use
 - Replace real-case screenshots with a fictional demo matter.
