@@ -1,0 +1,24 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-10-03T15:40:00Z" },
+  "title": "Publius Home",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 1440, "h": 5200, "title": "Home (current)", "expand": "fill" },
+    "HomeV2.dc.html": { "x": 1520, "y": 0, "w": 1440, "h": 6400, "title": "Home v2", "expand": "fill", "is_interactive": true }
+  },
+  "order": ["Main.dc.html", "HomeV2.dc.html"],
+  "notes": {
+    "t1": { "x": 0, "y": -300, "text": "Home: current vs. v2", "kind": "title1", "maxW": 2960 }
+  },
+  "designSystems": [
+    {
+      "title": "Publius",
+      "namespace": "publius",
+      "artifact": "https://claude.ai/artifact/AZoFKMYzHfQiXtpviKMX2V",
+      "version": "1791040378-6fd0",
+      "copiedAt": "2026-10-03T15:40:00Z"
+    }
+  ]
+}

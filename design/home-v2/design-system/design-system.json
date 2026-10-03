@@ -1,0 +1,72 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "Logos": {
+      "files": {
+        "publius-logo.png": {
+          "blob": "bf2b99606072f23dc7552f8a9ecdf8ae",
+          "name": "publius-logo.png",
+          "size": 19563,
+          "type": "image/png"
+        }
+      },
+      "name": "Logos",
+      "order": [
+        "publius-logo.png"
+      ],
+      "tile": "l"
+    },
+    "Product": {
+      "files": {
+        "data-relationships-graph.png": {
+          "blob": "7e77a424af017a8427fcf07d8510e9df",
+          "name": "data-relationships-graph.png",
+          "size": 506317,
+          "type": "image/png"
+        },
+        "case-overview.png": {
+          "blob": "17e8e2e1ea68b801f8e78b34b4cc2ca2",
+          "name": "case-overview.png",
+          "size": 635295,
+          "type": "image/png"
+        },
+        "case-details.png": {
+          "blob": "6c9c79e74d6fb3f18dd02ccb4f6a4ff0",
+          "name": "case-details.png",
+          "size": 714435,
+          "type": "image/png"
+        }
+      },
+      "name": "Product",
+      "order": [
+        "case-overview.png",
+        "case-details.png",
+        "data-relationships-graph.png"
+      ],
+      "tile": "l"
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-10-03T15:20:00Z",
+    "v": 1
+  },
+  "docs": {
+    "sections": []
+  },
+  "groups": [
+    "Logos",
+    "Product"
+  ],
+  "lastChange": {
+    "at": "2026-10-03T17:40:00Z",
+    "by": "Ed Kabatsky",
+    "note": "Saved case Overview and Details screenshots under Product",
+    "via": "Claude Code"
+  },
+  "layout": "files",
+  "libraries": [],
+  "namespace": "Publius",
+  "sections": {},
+  "title": "Publius"
+}
