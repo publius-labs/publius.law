@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Publius Home v2</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+<style>
+body{margin:0;font-family:"Inter",ui-sans-serif,system-ui,sans-serif;color:oklch(0.16 0.005 60);background:oklch(0.985 0.005 85)}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.8}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid oklch(0.16 0.005 60);outline-offset:3px}
+.on-dark a:focus-visible,.on-dark button:focus-visible,.on-dark input:focus-visible{outline-color:#FAFAF5}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;line-height:1;color:oklch(0.42 0.005 70)}
+details[open] summary::after{content:"–"}
+</style>
+</helmet>
+
+<div style="width:100%;min-width:0;background:oklch(0.985 0.005 85)">
+
+<!-- Header: CTA is a filled button (R4) -->
+<header style="position:sticky;top:0;z-index:50;background:oklch(0.985 0.005 85 / 0.9);backdrop-filter:blur(4px);border-bottom:1px solid oklch(0.86 0.005 80)">
+<div style="max-width:1240px;margin:0 auto;padding:12px 24px;box-sizing:border-box;min-height:64px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 36px">
+<a href="https://publius.law/" aria-label="Publius — Home" style="display:flex;align-items:center"><img src="/_blob/ad5ddda787051c927db1f9079b1b9211" alt="Publius" width="125" height="28" style="height:28px;width:auto"></a>
+<nav aria-label="Primary" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px;font-size:13px;letter-spacing:0.025em">
+<a href="https://publius.law/" style="color:oklch(0.16 0.005 60)">Home</a>
+<a href="https://publius.law/process" style="color:oklch(0.42 0.005 70)">Our Process</a>
+<a href="https://publius.law/practice" style="color:oklch(0.42 0.005 70)">Practice Areas</a>
+<a href="https://publius.law/about" style="color:oklch(0.42 0.005 70)">About</a>
+<a href="https://publius.law/contact" style="color:oklch(0.42 0.005 70)">Contact</a>
+<a href="https://publius.law/demo" style="display:inline-flex;align-items:center;padding:10px 18px;border-radius:2px;background:oklch(0.16 0.005 60);color:oklch(0.985 0.005 85);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap">Request a Pilot</a>
+</nav>
+</div>
+</header>
+
+<!-- Hero: headline left, product right (R1) -->
+<section class="on-dark" style="position:relative;overflow:hidden;background:linear-gradient(#1a1408 0%,#211808 45%,#1a1206 100%);color:#FAFAF5">
+<img src="/_blob/cebc0c3704432e8bbd988ad6510b3435" alt="" width="1920" height="1080" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(1);opacity:0.16">
+<div style="position:relative;max-width:1240px;margin:0 auto;padding:96px 24px 112px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;gap:56px 64px">
+<div style="flex:1 1 380px;min-width:0">
+<p style="margin:0 0 24px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,250,245,0.75)">Case intelligence for document-heavy litigation</p>
+<h1 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:clamp(48px,6.4vw,92px);line-height:0.95;letter-spacing:-0.03em;font-weight:500;color:#FAFAF5;text-wrap:balance">Know the whole case.</h1>
+<p style="margin:28px 0 0;max-width:560px;font-size:19px;line-height:1.55;color:rgba(250,250,245,0.85)">Publius connects scattered case files into a source-grounded matter workspace — so litigators can find the facts, see the connections, and prepare faster.</p>
+<div style="margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+<a href="https://publius.law/demo" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:2px;background:#FAFAF5;color:#0A0A0A;font-size:14px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap"><span>Request a Pilot</span><span aria-hidden="true">→</span></a>
+<p style="margin:0;font-size:13px;color:rgba(255,255,255,0.65)">Bring one matter. See what Publius finds.</p>
+</div>
+</div>
+
+<div style="flex:1.7 1 560px;min-width:0">
+<div style="border-radius:6px;border:1px solid rgba(0,0,0,0.1);background:#ffffff;overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,0.45)">
+<img src="/_blob/e443241b7d655e164b52e7fd18f57446" alt="Publius case Overview for a criminal matter: case summary, client, parties, recent documents and timeline" width="3210" height="1936" style="display:block;width:100%;height:auto">
+</div>
+<p style="margin:12px 0 0;font-size:11px;color:rgba(255,255,255,0.55)">Publius case Overview. Demo matter.</p>
+</div>
+</div>
+</section>
+
+<!-- Proof strip: true facts only (R3) -->
+<section style="background:oklch(0.985 0.005 85);border-bottom:1px solid oklch(0.86 0.005 80)">
+<div style="max-width:1240px;margin:0 auto;padding:56px 24px;box-sizing:border-box">
+<p style="margin:0 0 32px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">How Publius handles your case data</p>
+<div style="display:flex;flex-wrap:wrap;gap:32px 40px">
+<div style="flex:1 1 220px;min-width:0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(0.16 0.005 60)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><circle cx="11.5" cy="14.5" r="2.5"/><path d="M13.3 16.3 15 18"/></svg>
+<h3 style="margin:16px 0 0;font-size:15px;font-weight:600">Source-linked answers</h3>
+<p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:oklch(0.42 0.005 70)">Every answer links back to the document and passage it came from.</p>
+</div>
+<div style="flex:1 1 220px;min-width:0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(0.16 0.005 60)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+<h3 style="margin:16px 0 0;font-size:15px;font-weight:600">Encrypted</h3>
+<p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:oklch(0.42 0.005 70)">Client data is encrypted in transit and at rest.</p>
+</div>
+<div style="flex:1 1 220px;min-width:0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(0.16 0.005 60)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+<h3 style="margin:16px 0 0;font-size:15px;font-weight:600">Isolated workspaces</h3>
+<p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:oklch(0.42 0.005 70)">Each client workspace is isolated.</p>
+</div>
+<div style="flex:1 1 220px;min-width:0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(0.16 0.005 60)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+<h3 style="margin:16px 0 0;font-size:15px;font-weight:600">No model training</h3>
+<p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:oklch(0.42 0.005 70)">Your case data is never used to train models.</p>
+</div>
+</div>
+<p style="margin:32px 0 0;font-size:13px;color:oklch(0.42 0.005 70)">Pursuing SOC 2 compliance.</p>
+</div>
+</section>
+
+<!-- Why Publius -->
+<section class="on-dark" style="padding:clamp(96px,10vw,140px) 0 0;background:linear-gradient(#1a1408 0%,#211808 45%,#1a1206 100%);color:#FAFAF5">
+<div style="max-width:1240px;margin:0 auto;padding:0 24px clamp(96px,10vw,140px);box-sizing:border-box">
+<p style="margin:0 0 32px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.5)">Why Publius</p>
+<p style="margin:0;max-width:1024px;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:clamp(32px,4.4vw,56px);line-height:1.15;letter-spacing:-0.02em;font-weight:400">Litigation teams don't need another blank AI chat box. Publius starts with the matter — connecting documents, emails, transcripts, and exhibits into one persistent workspace where attorneys can question the record, trace answers back to sources, and carry that context into preparation.</p>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,0.1)">
+<div style="max-width:1240px;margin:0 auto;padding:40px 24px;box-sizing:border-box;text-align:center">
+<p style="margin:0;font-size:15px;letter-spacing:0.025em;color:rgba(255,255,255,0.65)">Currently piloting with litigation teams on document-heavy matters.</p>
+</div>
+</div>
+</section>
+
+<!-- Three product views (R2) -->
+<section style="padding:clamp(96px,10vw,144px) 0;background:oklch(0.985 0.005 85)">
+<div style="max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box">
+<div style="max-width:768px">
+<p style="margin:0 0 24px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Built for Small Firms</p>
+<h2 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:clamp(36px,4.6vw,64px);line-height:1.05;letter-spacing:-0.025em;font-weight:400;text-wrap:balance">Built for the firms that carry every case personally.</h2>
+<p style="margin:20px 0 0;max-width:576px;font-size:17px;line-height:1.625;color:oklch(0.42 0.005 70)">The case record has become a burden — too many documents, emails, transcripts, and exhibits to hold together efficiently. Publius keeps the record connected so your preparation starts from understanding, not from searching.</p>
+</div>
+
+<!-- View 1 -->
+<div style="margin-top:80px;padding-top:56px;border-top:1px solid oklch(0.86 0.005 80);display:flex;flex-wrap:wrap;align-items:center;gap:40px 64px">
+<div style="flex:1 1 340px;min-width:0;max-width:440px">
+<p style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:44px;line-height:1;letter-spacing:-0.02em;color:oklch(0.16 0.005 60 / 0.7)">01</p>
+<h3 style="margin:24px 0 0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:36px;line-height:1.1;letter-spacing:-0.025em;font-weight:400">Find the Facts</h3>
+<p style="margin:16px 0 0;font-size:16px;line-height:1.625;color:oklch(0.42 0.005 70)">Connect documents, emails, transcripts, people, events, and dates into a coherent matter view.</p>
+</div>
+<div style="flex:1.4 1 480px;min-width:0">
+<div style="padding:24px;background:oklch(0.94 0.005 80);border-radius:2px">
+<div style="border-radius:6px;border:1px solid rgba(0,0,0,0.1);background:#ffffff;overflow:hidden;box-shadow:0 20px 50px -20px rgba(26,20,8,0.35)">
+<img src="/_blob/32b6763312ffb71e3a80c60bcdfaa695" alt="Publius case Analysis: facts, claims, damages and risks cards for a matter" width="2700" height="1506" style="display:block;width:100%;height:auto">
+</div>
+</div>
+<p style="margin:12px 0 0;font-size:12px;color:oklch(0.42 0.005 70)">Publius case Analysis. Demo matter.</p>
+</div>
+</div>
+
+<!-- View 2 -->
+<div style="margin-top:80px;padding-top:56px;border-top:1px solid oklch(0.86 0.005 80);display:flex;flex-wrap:wrap;align-items:center;gap:40px 64px">
+<div style="flex:1 1 340px;min-width:0;max-width:440px">
+<p style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:44px;line-height:1;letter-spacing:-0.02em;color:oklch(0.16 0.005 60 / 0.7)">02</p>
+<h3 style="margin:24px 0 0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:36px;line-height:1.1;letter-spacing:-0.025em;font-weight:400">See the Connections</h3>
+<p style="margin:16px 0 0;font-size:16px;line-height:1.625;color:oklch(0.42 0.005 70)">Ask questions across the matter and tie findings back to the underlying record — so attorney review is practical, not speculative.</p>
+</div>
+<div style="flex:1.4 1 480px;min-width:0">
+<div style="padding:24px;background:oklch(0.94 0.005 80);border-radius:2px">
+<div style="border-radius:6px;border:1px solid rgba(0,0,0,0.1);background:#ffffff;overflow:hidden;box-shadow:0 20px 50px -20px rgba(26,20,8,0.35)">
+<img src="/_blob/424ca5a43c409c7996b05ec244eaa937" alt="Publius data relationships: an entity graph of people, organizations, locations and documents with filters for node and relationship types" width="2700" height="1820" style="display:block;width:100%;height:auto">
+</div>
+</div>
+<p style="margin:12px 0 0;font-size:12px;color:oklch(0.42 0.005 70)">Publius data relationships. Demo matter.</p>
+</div>
+</div>
+
+<!-- View 3 -->
+<div style="margin-top:80px;padding-top:56px;border-top:1px solid oklch(0.86 0.005 80);display:flex;flex-wrap:wrap;align-items:center;gap:40px 64px">
+<div style="flex:1 1 340px;min-width:0;max-width:440px">
+<p style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:44px;line-height:1;letter-spacing:-0.02em;color:oklch(0.16 0.005 60 / 0.7)">03</p>
+<h3 style="margin:24px 0 0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:36px;line-height:1.1;letter-spacing:-0.025em;font-weight:400">Prepare with Confidence</h3>
+<p style="margin:16px 0 0;font-size:16px;line-height:1.625;color:oklch(0.42 0.005 70)">Reuse the connected case context for chronology, research, deposition preparation, motion work, and trial preparation.</p>
+</div>
+<div style="flex:1.4 1 480px;min-width:0">
+<div style="padding:24px;background:oklch(0.94 0.005 80);border-radius:2px">
+<div style="border-radius:6px;border:1px solid rgba(0,0,0,0.1);background:#ffffff;overflow:hidden;box-shadow:0 20px 50px -20px rgba(26,20,8,0.35)">
+<video autoplay muted loop playsinline preload="metadata" poster="/_blob/211d8a905a72149a7ce425c7a50e36ba" width="960" height="884" aria-label="Screen recording: Publius builds a parties table, chronological timeline and list of missing dates and conflicting accounts from the case documents" style="display:block;width:100%;height:auto;aspect-ratio:960/884"><source src="/_blob/96cdbf206e6d7bdc0d5c6c1484f73c9a" type="video/mp4"></video>
+</div>
+</div>
+<p style="margin:12px 0 0;font-size:12px;color:oklch(0.42 0.005 70)">Publius document research, sped up. Demo matter.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Testimonial: honest placeholder until permission (R7) -->
+<section style="padding:clamp(96px,9vw,128px) 0;background:#F2EFE8">
+<div style="max-width:896px;margin:0 auto;padding:0 24px;box-sizing:border-box;text-align:center">
+<div style="height:1px;width:64px;margin:0 auto;background:oklch(0.16 0.005 60 / 0.3)"></div>
+<blockquote style="margin:48px 0 0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-style:italic;font-size:clamp(28px,3.4vw,46px);line-height:1.2;letter-spacing:-0.015em;color:oklch(0.16 0.005 60);text-wrap:balance">“This is exactly what solo practitioners have needed for years.”</blockquote>
+<img src="/_blob/9d0edf312ae0433d8f7e7f27a167760a" alt="Alex Meyerovich, M.C.Law Group" width="72" height="72" style="display:block;margin:40px auto 0;width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:center;border:1px solid oklch(0.86 0.005 80)">
+<p style="margin:16px 0 0;font-size:13px;color:oklch(0.42 0.005 70)">Alex Meyerovich, Immigration Court Attorney</p>
+<p style="margin:4px 0 0;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.42 0.005 70)">M.C.Law Group</p>
+<p style="margin:16px auto 0;max-width:512px;font-size:13px;line-height:1.625;color:oklch(0.42 0.005 70)">Join our early access program, currently onboarding select solo and small firm attorneys.</p>
+<div style="height:1px;width:64px;margin:48px auto 0;background:oklch(0.16 0.005 60 / 0.3)"></div>
+</div>
+</section>
+
+<!-- Team (R6): text taken from the About page -->
+<section style="padding:clamp(96px,9vw,128px) 0;background:oklch(0.985 0.005 85)">
+<div style="max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box">
+<p style="margin:0 0 24px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">The Team</p>
+<h2 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:clamp(36px,4.6vw,56px);line-height:1.05;letter-spacing:-0.025em;font-weight:400">Who we are.</h2>
+<div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:1px;background:oklch(0.86 0.005 80);border:1px solid oklch(0.86 0.005 80)">
+<div style="flex:1 1 260px;min-width:0;box-sizing:border-box;padding:40px;background:oklch(0.985 0.005 85)">
+<h3 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:28px;line-height:1.2;letter-spacing:-0.025em;font-weight:400">Edward Kabatsky</h3>
+<p style="margin:8px 0 0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Founder &amp; CEO</p>
+<p style="margin:16px 0 0;font-size:15px;line-height:1.625;color:oklch(0.42 0.005 70)">Legal technology, document workflows, and product direction.</p>
+<p style="margin:20px 0 0;font-size:13px"><a href="https://www.linkedin.com/in/ekabatsky/" target="_blank" rel="noopener noreferrer" aria-label="Edward Kabatsky on LinkedIn (opens in a new tab)" style="border-bottom:1px solid oklch(0.16 0.005 60 / 0.4);padding-bottom:1px">LinkedIn ↗</a></p>
+</div>
+<div style="flex:1 1 260px;min-width:0;box-sizing:border-box;padding:40px;background:oklch(0.985 0.005 85)">
+<h3 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:28px;line-height:1.2;letter-spacing:-0.025em;font-weight:400">Neal Wojdowski</h3>
+<p style="margin:8px 0 0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">E-Discovery and Litigation Support Expert</p>
+<p style="margin:16px 0 0;font-size:15px;line-height:1.625;color:oklch(0.42 0.005 70)">Digital forensics, eDiscovery, and litigation workflows.</p>
+<p style="margin:20px 0 0;font-size:13px"><a href="https://www.linkedin.com/in/nealwojdowski" target="_blank" rel="noopener noreferrer" aria-label="Neal Wojdowski on LinkedIn (opens in a new tab)" style="border-bottom:1px solid oklch(0.16 0.005 60 / 0.4);padding-bottom:1px">LinkedIn ↗</a></p>
+</div>
+<div style="flex:1 1 260px;min-width:0;box-sizing:border-box;padding:40px;background:oklch(0.985 0.005 85)">
+<h3 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:28px;line-height:1.2;letter-spacing:-0.025em;font-weight:400">Jason Tate</h3>
+<p style="margin:8px 0 0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Chief of Business Growth</p>
+<p style="margin:16px 0 0;font-size:15px;line-height:1.625;color:oklch(0.42 0.005 70)">20+ years leading go-to-market strategy, partnerships, and operational efficiency.</p>
+<p style="margin:20px 0 0;font-size:13px"><a href="https://www.linkedin.com/in/jasonltate/" target="_blank" rel="noopener noreferrer" aria-label="Jason Tate on LinkedIn (opens in a new tab)" style="border-bottom:1px solid oklch(0.16 0.005 60 / 0.4);padding-bottom:1px">LinkedIn ↗</a></p>
+</div>
+<div style="min-width:0;box-sizing:border-box;padding:40px;background:oklch(0.985 0.005 85)">
+<h3 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:28px;line-height:1.2;letter-spacing:-0.025em;font-weight:400">Engineering</h3>
+<p style="margin:8px 0 0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Product &amp; infrastructure</p>
+<p style="margin:16px 0 0;font-size:15px;line-height:1.625;color:oklch(0.42 0.005 70)">A team of talented engineers.</p>
+</div>
+</div>
+<p style="margin:56px 0 24px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Advisors</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1px;background:oklch(0.86 0.005 80);border:1px solid oklch(0.86 0.005 80)">
+<div style="min-width:0;box-sizing:border-box;padding:40px;background:oklch(0.985 0.005 85)">
+<h3 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:28px;line-height:1.2;letter-spacing:-0.025em;font-weight:400">Vitaly Leokumovich</h3>
+<p style="margin:8px 0 0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Advisor</p>
+<p style="margin:16px 0 0;font-size:15px;line-height:1.625;color:oklch(0.42 0.005 70)">Lektra, cloud services provider.</p>
+<p style="margin:20px 0 0;font-size:13px"><a href="https://www.linkedin.com/in/leokumovich/" target="_blank" rel="noopener noreferrer" aria-label="Vitaly Leokumovich on LinkedIn (opens in a new tab)" style="border-bottom:1px solid oklch(0.16 0.005 60 / 0.4);padding-bottom:1px">LinkedIn ↗</a></p>
+</div>
+<div style="min-width:0;box-sizing:border-box;padding:40px;background:oklch(0.985 0.005 85)">
+<h3 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:28px;line-height:1.2;letter-spacing:-0.025em;font-weight:400">Arthur Osmanov</h3>
+<p style="margin:8px 0 0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Advisor</p>
+<p style="margin:16px 0 0;font-size:15px;line-height:1.625;color:oklch(0.42 0.005 70)">Branding and user experience.</p>
+<p style="margin:20px 0 0;font-size:13px"><a href="https://www.linkedin.com/in/arthur-osmanov/" target="_blank" rel="noopener noreferrer" aria-label="Arthur Osmanov on LinkedIn (opens in a new tab)" style="border-bottom:1px solid oklch(0.16 0.005 60 / 0.4);padding-bottom:1px">LinkedIn ↗</a></p>
+</div>
+<div style="min-width:0;box-sizing:border-box;padding:40px;background:oklch(0.985 0.005 85)">
+<h3 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:28px;line-height:1.2;letter-spacing:-0.025em;font-weight:400">Rob Matzkin</h3>
+<p style="margin:8px 0 0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Advisor</p>
+<p style="margin:16px 0 0;font-size:15px;line-height:1.625;color:oklch(0.42 0.005 70)">Revenue architecture, go-to-market execution, and the enterprise motion.</p>
+<p style="margin:20px 0 0;font-size:13px"><a href="https://www.linkedin.com/in/rob-j-matzkin-06027634/" target="_blank" rel="noopener noreferrer" aria-label="Rob Matzkin on LinkedIn (opens in a new tab)" style="border-bottom:1px solid oklch(0.16 0.005 60 / 0.4);padding-bottom:1px">LinkedIn ↗</a></p>
+</div>
+</div>
+<p style="margin:24px 0 0;font-size:13px"><a href="https://publius.law/about" style="border-bottom:1px solid oklch(0.16 0.005 60 / 0.4);padding-bottom:1px">About Publius →</a></p>
+<div style="margin-top:72px;padding-top:40px;border-top:1px solid oklch(0.86 0.005 80)">
+<p style="margin:0 0 24px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Our Supporters</p>
+<div style="display:flex;flex-wrap:wrap;gap:1px;background:oklch(0.86 0.005 80);border:1px solid oklch(0.86 0.005 80)">
+<div style="flex:1 1 220px;min-width:0;box-sizing:border-box;padding:32px 24px;background:oklch(0.985 0.005 85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;text-align:center"><div style="height:72px;width:100%;display:flex;align-items:center;justify-content:center"><a href="https://cnp.benfranklin.org/" target="_blank" rel="noopener noreferrer" aria-label="Ben Franklin Technology Partners of Central &amp; Northern PA (opens in a new tab)" style="display:flex;align-items:center;justify-content:center;height:100%;max-width:100%"><img src="/_blob/5296df197f87886630ee2bbbc1b5ee7f" alt="Ben Franklin Technology Partners, Central &amp; Northern Pennsylvania" style="display:block;height:72px;width:auto;max-width:100%"></a></div><p style="margin:0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Our Investors</p></div>
+<div style="flex:1 1 220px;min-width:0;box-sizing:border-box;padding:32px 24px;background:oklch(0.985 0.005 85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;text-align:center"><div style="height:72px;width:100%;display:flex;align-items:center;justify-content:center"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" aria-label="Amazon Web Services (opens in a new tab)" style="display:flex;align-items:center;justify-content:center;height:100%;max-width:100%"><img src="/_blob/7fb45e899065cb5b8613abeb43bdff3f" alt="AWS" style="display:block;height:42px;width:auto;max-width:100%"></a></div><p style="margin:0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Our Sponsors</p></div>
+<div style="flex:1 1 220px;min-width:0;box-sizing:border-box;padding:32px 24px;background:oklch(0.985 0.005 85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;text-align:center"><div style="height:72px;width:100%;display:flex;align-items:center;justify-content:center"><img src="/_blob/1f1fa60b4eaeb8ca140365eb917bda4b" alt="Innovative" style="display:block;height:34px;width:auto;max-width:100%"></div><p style="margin:0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Our Technology Partners</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ (R5): answers copied from the Our Process page -->
+<section style="padding:clamp(96px,9vw,128px) 0;background:oklch(0.985 0.005 85);border-top:1px solid oklch(0.86 0.005 80)">
+<div style="max-width:896px;margin:0 auto;padding:0 24px;box-sizing:border-box">
+<p style="margin:0 0 24px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:oklch(0.42 0.005 70)">Common Questions</p>
+<h2 style="margin:0 0 40px;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:clamp(36px,4.6vw,56px);line-height:1.05;letter-spacing:-0.025em;font-weight:400">Frequently asked</h2>
+<div style="border-bottom:1px solid oklch(0.86 0.005 80)">
+<details style="border-top:1px solid oklch(0.86 0.005 80)">
+<summary style="font-size:17px;font-weight:500">What types of law firms does Publius serve?</summary>
+<p style="margin:0 0 24px;max-width:720px;font-size:15px;line-height:1.7;color:oklch(0.42 0.005 70)">Publius is built for solo practitioners and small litigation firms handling document-heavy civil matters — the teams that carry every case personally and need tools sized for how they actually work.</p>
+</details>
+<details style="border-top:1px solid oklch(0.86 0.005 80)">
+<summary style="font-size:17px;font-weight:500">How secure is my client data?</summary>
+<p style="margin:0 0 24px;max-width:720px;font-size:15px;line-height:1.7;color:oklch(0.42 0.005 70)">All data is encrypted in transit and at rest. Each client workspace is isolated. Publius never uses your case data to train models, and you retain full control of your files at all times.</p>
+</details>
+<details style="border-top:1px solid oklch(0.86 0.005 80)">
+<summary style="font-size:17px;font-weight:500">How long does implementation take?</summary>
+<p style="margin:0 0 24px;max-width:720px;font-size:15px;line-height:1.7;color:oklch(0.42 0.005 70)">Most firms are up and running within a week. You upload your case files, and Publius handles ingestion, normalization, and workspace setup with minimal configuration.</p>
+</details>
+<details style="border-top:1px solid oklch(0.86 0.005 80)">
+<summary style="font-size:17px;font-weight:500">Do you offer training and support?</summary>
+<p style="margin:0 0 24px;max-width:720px;font-size:15px;line-height:1.7;color:oklch(0.42 0.005 70)">Yes. Every pilot includes onboarding, a walkthrough of your first matter, and direct access to the Publius team for questions along the way.</p>
+</details>
+</div>
+</div>
+</section>
+
+<!-- Closing CTA -->
+<section class="on-dark" style="background:linear-gradient(#1a1408 0%,#211808 45%,#1a1206 100%);color:#FAFAF5">
+<div style="max-width:1240px;margin:0 auto;padding:clamp(96px,9vw,128px) 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:flex-end;gap:40px">
+<div style="flex:2 1 480px;min-width:0">
+<h2 style="margin:0;font-family:'Cormorant Garamond',ui-serif,Georgia,serif;font-size:clamp(34px,4.4vw,60px);line-height:1.05;letter-spacing:-0.025em;font-weight:400;color:#FAFAF5;text-wrap:balance">See Publius on your matter.</h2>
+<p style="margin:20px 0 0;max-width:576px;font-size:17px;line-height:1.625;color:rgba(255,255,255,0.7)">We start every pilot with one real question on one real case. Request a walkthrough to see how it works on your documents.</p>
+</div>
+<div style="flex:1 1 240px;display:flex;justify-content:flex-end">
+<a href="https://publius.law/demo" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:2px;background:#FAFAF5;color:#0A0A0A;font-size:14px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap"><span>Request a Pilot</span><span aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+
+<!-- Footer with link columns (R4) -->
+<footer class="on-dark" style="background:linear-gradient(#1a1408 0%,#211808 45%,#1a1206 100%);color:#FAFAF5;border-top:1px solid rgba(255,255,255,0.1)">
+<div style="max-width:1240px;margin:0 auto;padding:80px 24px;box-sizing:border-box">
+<div style="display:flex;flex-wrap:wrap;gap:48px 64px;justify-content:space-between">
+<div style="flex:1 1 280px;min-width:0;max-width:340px">
+<a href="https://publius.law/" aria-label="Publius — Home" style="display:inline-flex"><img src="/_blob/ad5ddda787051c927db1f9079b1b9211" alt="Publius" width="161" height="36" style="height:36px;width:auto;filter:invert(1)"></a>
+<p style="margin:20px 0 0;max-width:300px;font-size:14px;line-height:1.625;color:rgba(255,255,255,0.6)">Case intelligence for lean litigation teams.</p>
+<a href="mailto:info@publius.law" style="margin-top:16px;display:inline-block;padding-bottom:1px;font-size:14px;color:rgba(255,255,255,0.8);border-bottom:1px solid rgba(255,255,255,0.2)">info@publius.law</a>
+</div>
+<div style="flex:2 1 360px;min-width:0;display:flex;flex-wrap:wrap;gap:32px 56px">
+<div style="min-width:120px">
+<p style="margin:0 0 16px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Product</p>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:rgba(255,255,255,0.8)">
+<a href="https://publius.law/process">Our Process</a>
+<a href="https://publius.law/practice">Practice Areas</a>
+<a href="https://publius.law/demo">Request a Pilot</a>
+</div>
+</div>
+<div style="min-width:120px">
+<p style="margin:0 0 16px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Company</p>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:rgba(255,255,255,0.8)">
+<a href="https://publius.law/about">About</a>
+<a href="https://publius.law/contact">Contact</a>
+<a href="https://www.linkedin.com/company/publiuslegal/">LinkedIn</a>
+<a href="https://x.com/PubliusNews">X</a>
+</div>
+</div>
+<div style="min-width:120px">
+<p style="margin:0 0 16px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Legal</p>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:rgba(255,255,255,0.8)">
+<a href="https://publius.law/legal-terms">Legal Terms</a>
+<a href="https://publius.law/terms-of-service">Terms of Service</a>
+</div>
+</div>
+</div>
+<div style="flex:1 1 280px;min-width:0;max-width:360px">
+<p style="margin:0;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Early Access</p>
+<p style="margin:12px 0 0;font-size:14px;line-height:1.625;color:rgba(255,255,255,0.8)">Subscribe to receive early access when we go live.</p>
+<div style="margin-top:20px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,0.3)">
+<input id="v2-footer-email" type="email" aria-label="Email address" placeholder="you@firm.com" style="flex:1;min-width:0;background:transparent;border:0;padding:12px 0;font:inherit;font-size:14px;color:#FAFAF5">
+<button type="button" style="background:transparent;border:0;padding:0 0 0 16px;font:inherit;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);cursor:pointer;white-space:nowrap">Subscribe →</button>
+</div>
+</div>
+</div>
+<p style="margin:64px 0 0;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1);max-width:768px;font-size:12px;line-height:1.625;color:rgba(255,255,255,0.5)">Publius is an AI-powered legal technology platform designed to assist attorneys with discovery, research, and trial preparation. Publius does not provide legal advice and should not be relied upon as a substitute for independent professional judgment. Use of the platform does not create an attorney-client relationship. All users remain solely responsible for their legal work, ethical obligations, and compliance with applicable laws and professional rules.</p>
+<p style="margin:40px 0 0;font-size:12px;color:rgba(255,255,255,0.4)">© Publius 2026</p>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
