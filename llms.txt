@@ -6,6 +6,7 @@
 
 - [Homepage](https://publius.law/): High-level overview of the Publius platform, value proposition, and who it is built for.
 - [About Publius](https://publius.law/about): Background on Publius, what the product does, who it serves, and the limits of the service.
+- [News](https://publius.law/news): Timeline of Publius funding, pilot, infrastructure and compliance milestones.
 - [Our Process](https://publius.law/process): How Publius ingests legal data, analyzes it, and produces attorney-ready insights.
 - [Practice Areas](https://publius.law/practice): Legal practice areas supported by Publius.
 
