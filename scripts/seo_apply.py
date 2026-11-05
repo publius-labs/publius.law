@@ -20,7 +20,7 @@ from urllib.parse import urljoin
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://publius.law"
-DEFAULT_IMG = f"{BASE}/assets/hero-attorney-BgfVu0lT.jpg"
+DEFAULT_IMG = f"{BASE}/assets/og/hero-attorney-BgfVu0lT.jpg"  # 1200x630 crop (scripts/make_og_images.py)
 BEGIN, END = "<!-- seo:begin -->", "<!-- seo:end -->"
 ORG_ID, SITE_ID = f"{BASE}/#organization", f"{BASE}/#website"
 
@@ -57,6 +57,37 @@ MANAGED = re.compile(
     r'|name="twitter:(?:card|title|description|image)")[^>]*>\s*',
     re.I,
 )
+
+
+# Team shown on /about/. Asserted against the page's visible HTML so schema cannot drift from it.
+# (name, jobTitle as shown on the site, LinkedIn URL, relationship: "employee" or "advisor")
+TEAM = [
+    ("Edward Kabatsky", "Founder & CEO", "https://www.linkedin.com/in/ekabatsky/", "employee"),
+    ("Neal Wojdowski", "E-Discovery and Litigation Support Expert", "https://www.linkedin.com/in/nealwojdowski", "employee"),
+    ("Jason Tate", "Chief of Business Growth", "https://www.linkedin.com/in/jasonltate/", "employee"),
+    ("Vitaly Leokumovich", "Advisor", "https://www.linkedin.com/in/leokumovich/", "advisor"),
+    ("Arthur Osmanov", "Advisor", "https://www.linkedin.com/in/arthur-osmanov/", "advisor"),
+    ("Rob Matzkin", "Advisor", "https://www.linkedin.com/in/rob-j-matzkin-06027634/", "advisor"),
+]
+
+
+def og_variant(path):
+    """Prefer the 1200x630 crop in assets/og/ when one exists for this image."""
+    if path.startswith("/assets/og/") or not path.startswith("/assets/"):
+        return path
+    name = Path(path).name
+    return f"/assets/og/{name}" if (ROOT / "assets" / "og" / name).exists() else path
+
+
+def team_nodes(body):
+    nodes = []
+    for name, title, url, kind in TEAM:
+        assert name in body and url in body, f"team member no longer on /about/: {name}"
+        node = {"@type": "Person", "@id": f"{BASE}/about/#{name.lower().replace(' ', '-')}", "name": name,
+                "jobTitle": title, "sameAs": [url]}
+        node["worksFor" if kind == "employee" else "affiliation"] = {"@id": ORG_ID}
+        nodes.append(node)
+    return nodes
 
 
 def attr(tag_html, name):
@@ -144,11 +175,15 @@ def process_page(rel, url, new_title, ptype, trail):
 
     og_title = title if (new_title or rel in REBUILD_OG) else (og_title_old or title)
     og_desc = desc if (rel in REBUILD_OG or not og_desc) else og_desc
-    img = urljoin(BASE + "/", og_img) if og_img else DEFAULT_IMG
+    if og_img and og_img.startswith("http"):
+        og_img = og_img[len(BASE):] if og_img.startswith(BASE) else og_img
+    img = (urljoin(BASE + "/", og_variant(og_img)) if og_img.startswith("/") else og_img) if og_img else DEFAULT_IMG
     canon = BASE + url
 
     head = MANAGED.sub("", head)
     graph = home_graph(title, desc or "", rest) if rel == "index.html" else page_graph(url, ptype, title, desc, trail)
+    if rel == "about/index.html":
+        graph += team_nodes(rest)
     lines = [
         BEGIN,
         f'<link rel="canonical" href="{canon}"/>',
