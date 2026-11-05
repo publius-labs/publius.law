@@ -46,7 +46,7 @@ PAGES = [
 # Pages whose og:title / og:description were stale or marketing-heavy: rebuild from <title>/description.
 REBUILD_OG = {"legal-terms/index.html", "terms-of-service/index.html"}
 # Internal / investor / competitive material: keep out of search indexes (see robots.txt note).
-NOINDEX = ["pitch/index.html", "demo/publius_competition.html"] + sorted(
+NOINDEX = ["pitch/index.html", "demo/publius_competition.html", "ROI.html", "calculator.html"] + sorted(
     str(p.relative_to(ROOT)) for p in (ROOT / "PitchDeck_HTML").glob("*.html")
 )
 # Not in the sitemap: noindex pages plus the unlinked calculators.
