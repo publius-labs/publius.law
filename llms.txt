@@ -10,7 +10,7 @@
 - Data handling (as stated on the site): client data is encrypted in transit and at rest; each client workspace is isolated; case data is never used to train models.
 - Compliance: Publius is pursuing SOC 2. It is in progress, not completed.
 - Company: Publius Legal Inc. (Delaware C-corp), founded 2026. Founder and CEO: Edward Kabatsky.
-- Pricing: not published. Pilots begin with one real question on one real matter.
+- Pricing: there is no public pricing page. For pricing, contact info@publius.law or request a pilot; pilots begin with one real question on one real matter.
 
 ## Core pages
 
