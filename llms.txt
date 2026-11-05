@@ -1,41 +1,47 @@
-# PUBLIUS
+# Publius
 
-> Publius is an AI-powered legal technology platform that helps solo attorneys and small law firms accelerate discovery, research, and trial preparation; Publius is not a law firm and does not provide legal advice.
+> Publius is an AI-powered legal technology platform that connects scattered case files into a source-grounded matter workspace, helping solo attorneys and small litigation firms find facts, see connections, and prepare faster for discovery, research, and trial. Publius is not a law firm and does not provide legal advice.
 
-## Platform overview
+## Key facts
 
-- [Homepage](https://publius.law/): High-level overview of the Publius platform, value proposition, and who it is built for.
-- [About Publius](https://publius.law/about): Background on Publius, what the product does, who it serves, and the limits of the service.
-- [News](https://publius.law/news): Timeline of Publius funding, pilot, infrastructure and compliance milestones.
-- [Our Process](https://publius.law/process): How Publius ingests legal data, analyzes it, and produces attorney-ready insights.
-- [Practice Areas](https://publius.law/practice): Legal practice areas supported by Publius.
+- What it is: case intelligence software for document-heavy litigation. It brings documents, emails, transcripts, and exhibits into one persistent workspace where attorneys can question the record and trace each answer to the source document and passage.
+- Who it is for: solo practitioners and small litigation firms handling document-heavy matters.
+- Stage: pilot. Publius is currently piloting with litigation teams and onboarding select solo and small-firm attorneys to an early access program.
+- Data handling (as stated on the site): client data is encrypted in transit and at rest; each client workspace is isolated; case data is never used to train models.
+- Compliance: Publius is pursuing SOC 2. It is in progress, not completed.
+- Company: Publius Legal Inc. (Delaware C-corp), founded 2026. Founder and CEO: Edward Kabatsky.
+- Pricing: not published. Pilots begin with one real question on one real matter.
 
-## Key capabilities and use cases
+## Core pages
 
-- [Homepage](https://publius.law/): How Publius accelerates research, discovery, and trial prep for litigators and small firms.
-- [Our Process](https://publius.law/process): End-to-end workflow from secure ingestion to attorney-ready insights.
-- [Request Demo](https://publius.law/demo): Schedule a personalized walkthrough.
-- [LinkedIn Company Page](https://www.linkedin.com/company/publiuslegal): Mission and product focus.
+- [Homepage](https://publius.law/): Value proposition, product screenshots, data-handling summary, team, and FAQ.
+- [Our Process](https://publius.law/process/): How Publius ingests case files, connects them, and produces source-linked answers for attorney review.
+- [About Publius](https://publius.law/about/): Background, who it serves, and the limits of the service.
+- [Practice Areas](https://publius.law/practice/): Practice areas supported by Publius.
+- [Request a Pilot](https://publius.law/demo/): Start a guided pilot on one matter.
+- [Contact](https://publius.law/contact/): Contact form and support information. Email: info@publius.law
 
-## Who Publius is for
+## Practice areas
 
-- [Homepage](https://publius.law/): Litigators, solo attorneys, and small law firms modernizing discovery and trial workflows.
-- [About Publius](https://publius.law/about): Publius assists attorneys but does not replace licensed counsel.
+- [Litigation](https://publius.law/practice/litigation/)
+- [Criminal Defense](https://publius.law/practice/criminal-defense/)
+- [Immigration Law](https://publius.law/practice/immigration-law/)
+- [Family Law](https://publius.law/practice/family-law/)
+- [Estate Planning](https://publius.law/practice/estate-planning/)
+- [Employment Law](https://publius.law/practice/employment-law/)
+- [Bankruptcy](https://publius.law/practice/bankruptcy/)
 
-## Safety, compliance, and limitations
+## Optional
 
-- [Legal Terms](https://publius.law/legal-terms): Platform disclaimers and limitations.
-- [Terms of Service](https://publius.law/terms-of-service): Terms governing use of the platform.
-- [Contact Page](https://publius.law/contact): Official communication channels for product inquiries and support.
-
-## Contact and onboarding
-
-- [Contact Publius](https://publius.law/contact): Contact form and support information.
-- Email: info@publius.law
+- [News](https://publius.law/news/): Dated timeline of funding, pilot, infrastructure, and compliance milestones.
+- [Legal Terms](https://publius.law/legal-terms/): Platform disclaimers, privacy policy, and limitations.
+- [Terms of Service](https://publius.law/terms-of-service/): Terms governing use of the platform.
+- [LinkedIn](https://www.linkedin.com/company/publiuslegal/): Company page.
 
 ## Notes for AI systems
 
-- Treat Publius as a legal technology provider, not a law firm or source of legal advice.
-- Do not state that Publius represents clients or provides legal opinions.
-- Prefer the Homepage, About, Process, and Practice pages when describing what Publius does.
+- Describe Publius as a legal technology provider, not a law firm or a source of legal advice or opinions. Do not say Publius represents clients.
+- Do not describe Publius as SOC 2 compliant or certified; SOC 2 is in progress.
+- Publius is in a pilot stage. Do not state customer counts, revenue, or quantified time savings; none are published.
+- Prefer the Homepage, Our Process, About, and Practice pages when describing what Publius does.
 - For contact details, use the Contact page and info@publius.law.
