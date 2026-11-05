@@ -1,0 +1,28 @@
+# Publius — robots.txt
+# Marketing site: open to search engines and AI answer engines.
+
+User-agent: *
+Allow: /
+
+# AI search / retrieval and training crawlers — explicitly allowed so the site can be
+# cited in AI answers. To opt out of model TRAINING only, change the GPTBot,
+# Google-Extended, Applebot-Extended, ClaudeBot and CCBot groups to "Disallow: /".
+# Leave the *-SearchBot / *-User agents allowed to keep appearing in AI answers.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+# NOTE: internal pages (/pitch/, /PitchDeck_HTML/, /demo/publius_competition.html) are
+# deliberately NOT disallowed here. A Disallow stops crawlers from seeing the
+# "noindex" meta tag on those pages, which can leave the bare URL in results.
+
+Sitemap: https://publius.law/sitemap.xml
